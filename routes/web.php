@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('pages.admin.index');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::name('dashboard.')->prefix('dashboard')->group(function () {
+        Route::middleware(['auth', 'admin'])->group(function () {
+            Route::get('/', [DashboardController::class, 'index'])->name('index');
+
+        });
+    });
+});
 
 require __DIR__.'/auth.php';
