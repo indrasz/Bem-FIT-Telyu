@@ -10,7 +10,9 @@
     <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}
+
+            " href="{{ route('dashboard.index') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -30,7 +32,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">
+          <a class="nav-link
+            {{
+                (request()->is('dashboard/advokasi')) ||
+                request()->is('dashboard/advokasi/*') ||
+                request()->is('dashboard/*/advokasi') ||
+                request()->is('dashboard/*/advokasi/*') ? 'active' : ''
+            }}" href="{{ route('dashboard.advokasi.index') }}"
+          >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>advokasi</title>
@@ -50,7 +59,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link
+          {{
+            (request()->is('dashboard/vokasi-store')) ||
+            request()->is('dashboard/vokasi-store/*') ||
+            request()->is('dashboard/*/vokasi-store') ||
+            request()->is('dashboard/*/vokasi-store/*') ? 'active' : ''
+          }}
+
+            " href="{{ route('dashboard.vokasi-store.index') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>store</title>
@@ -70,7 +87,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+            <a class="nav-link
+                {{
+                    (request()->is('dashboard/creation')) ||
+                    request()->is('dashboard/creation/*') ||
+                    request()->is('dashboard/*/creation') ||
+                    request()->is('dashboard/*/creation/*') ? 'active' : ''
+                }}" href="{{ route('dashboard.creation.index') }}"
+            >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>creation</title>
@@ -91,7 +115,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link
+            {{
+                (request()->is('dashboard/breaking-news')) ||
+                request()->is('dashboard/breaking-news/*') ||
+                request()->is('dashboard/*/breaking-news') ||
+                request()->is('dashboard/*/breaking-news/*') ? 'active' : ''
+            }}" href="{{ route('dashboard.breaking-news.index') }}"
+          >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>document</title>
@@ -114,7 +145,14 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Profile pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link
+            {{
+                (request()->is('dashboard/profile')) ||
+                request()->is('dashboard/profile/*') ||
+                request()->is('dashboard/*/profile') ||
+                request()->is('dashboard/*/profile/*') ? 'active' : ''
+            }}" href="{{ route('dashboard.profile.index') }}"
+          >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>customer-support</title>
@@ -135,7 +173,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link
+            {{
+                (request()->is('dashboard/user')) ||
+                request()->is('dashboard/user/*') ||
+                request()->is('dashboard/*/user') ||
+                request()->is('dashboard/*/user/*') ? 'active' : ''
+            }}" href="{{ route('dashboard.user.index') }}"
+          >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

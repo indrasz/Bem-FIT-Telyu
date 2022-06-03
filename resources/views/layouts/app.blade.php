@@ -6,7 +6,7 @@
     @include('includes.admin.meta')
 
   <title>
-    Dashboard | BEM FIT Telkom University
+    @yield('title') | BEM FIT Telkom University
   </title>
 
   @stack('before-style')
