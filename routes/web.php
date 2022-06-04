@@ -28,7 +28,9 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
         Route::middleware(['auth', 'admin'])->group(function () {
             Route::get('/', [DashboardController::class, 'index'])->name('index');
-            Route::resource('vokasi-store', VokasiStoreController::class);
+            Route::resource('vokasi-store', VokasiStoreController::class)->only([
+                'index', 'create', 'edit', 'update', 'store', 'destroy'
+            ]);
             Route::resource('advokasi', AdvokasiController::class);
             Route::resource('creation', CreationController::class);
             Route::resource('breaking-news', BreakingNewsController::class);
