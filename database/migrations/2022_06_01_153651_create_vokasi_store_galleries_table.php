@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('vokasi_store_galleries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vokasi_stores_id')->nullable()->index('fk_vokasi_store_galleries_to_vokasi_stores');
-            $table->string('photos');
+            $table->foreignId('vokasi_stores_id')->nullable()->index('fk_vokasi_store_galleries_to_vokasi_store');
+            $table->string('thumbnail');
             $table->softDeletes();
             $table->timestamps();
         });

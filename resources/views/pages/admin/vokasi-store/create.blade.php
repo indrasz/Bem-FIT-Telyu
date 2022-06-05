@@ -39,7 +39,7 @@
                                     <div class="imagePreview"></div>
                                     <label class="btn btn-success">
                                         Upload
-                                        <input type="file" name="photos[]" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                        <input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
                                     </label>
                                 </label>
                                 </div><!-- col-2 -->
@@ -137,7 +137,7 @@
     </script>
     <script>
         $(".imgAdd").click(function(){
-        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-4 imgUp"><div class="imagePreview"></div><label class="btn btn-success">Upload<input type="file" name="photos[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del bg-danger mx-2"></i></div>');
+        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-4 imgUp"><div class="imagePreview"></div><label class="btn btn-success">Upload<input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del bg-danger mx-2"></i></div>');
         });
         $(document).on("click", "i.del" , function() {
             $(this).parent().remove();

@@ -19,9 +19,9 @@ class VokasiStoreController extends Controller
      */
     public function index()
     {
-        $product = VokasiStore::orderBy('created_at', 'desc')->with('gallery')->get();
+        $vokasiStore = VokasiStore::orderBy('created_at', 'desc')->with('gallery')->get();
 
-        return view('pages.admin.vokasi-store.index', compact('product'));
+        return view('pages.admin.vokasi-store.index', compact('vokasiStore'));
     }
 
     /**
@@ -46,19 +46,19 @@ class VokasiStoreController extends Controller
         $data['slug'] = Str::slug($request->name);
 
         // add to vokasi store
-        $product = VokasiStore::create($data);
+        $vokasiStore = VokasiStore::create($data);
         // add to thumbnail product
-        if($request->hasfile('photos'))
+        if($request->hasfile('thumbnail'))
         {
-            foreach($request->file('photos') as $file)
+            foreach($request->file('thumbnail') as $file)
             {
                 $path = $file->store(
                     'assets/thumbnail/product', 'public'
                 );
 
                 $product_galleries = new VokasiStoreGallery();
-                $product_galleries->vokasi_stores_id = $product['id'];
-                $product_galleries->photos = $path;
+                $product_galleries->vokasi_stores_id = $vokasiStore['id'];
+                $product_galleries->thumbnail = $path;
                 $product_galleries->save();
             }
         }
@@ -84,15 +84,18 @@ class VokasiStoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(VokasiStore $product)
+    public function edit(VokasiStore $vokasiStore)
     {
-        $thumbnail_product = VokasiStoreGallery::where('vokasi_stores_id', $product['id'])->get();
-        // return view('pages.admin.vokasi-store.edit', compact('product', 'thumbnail_product'));
+        $thumbnail_product = VokasiStoreGallery::where('vokasi_stores_id', $vokasiStore['id'])->get();
 
-        return view('pages.admin.vokasi-store.edit',[
-            'items' => $product,
-            'thumbnail_product' => $thumbnail_product
-        ]);
+        // dd($vokasiStore);
+        return view('pages.admin.vokasi-store.edit', compact('vokasiStore', 'thumbnail_product'));
+
+
+        // return view('pages.admin.vokasi-store.edit',[
+        //     'items' => $product,
+        //     'thumbnail_product' => $thumbnail_product
+        // ]);
     }
 
     /**
@@ -102,17 +105,18 @@ class VokasiStoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(VokasiStoreRequest $request, VokasiStore $products)
+    public function update(VokasiStoreRequest $request, VokasiStore $vokasiStore)
     {
         $data = $request->all();
+
         $data['slug'] = Str::slug($request->name);
 
         // update to service
-        $products->update($data);
+        $vokasiStore->update($data);
 
         // update to thumbnail service
-        if($request->hasfile('photos')){
-            foreach ($request->file('photos') as $key => $file)
+        if($request->hasfile('thumbnails')){
+            foreach ($request->file('thumbnails') as $key => $file)
             {
                 // get old photo thumbnail
                 $get_photo = VokasiStoreGallery::where('id', $key)->first();
@@ -124,7 +128,7 @@ class VokasiStoreController extends Controller
 
                 // update thumbail
                 $thumbnail_product = VokasiStoreGallery::find($key);
-                $thumbnail_product->photos = $path;
+                $thumbnail_product->thumbnail = $path;
                 $thumbnail_product->save();
 
                 // delete old photo thumbnail
@@ -138,19 +142,20 @@ class VokasiStoreController extends Controller
         }
 
         // add to thumbnail service
-        if($request->hasfile('photo')){
-            foreach($request->file('photo') as $file)
+        if($request->hasfile('thumbnail')){
+            foreach($request->file('thumbnail') as $file)
             {
                 $path = $file->store(
                     'assets/thumbnail/product', 'public'
                 );
 
                 $thumbnail_product = new VokasiStoreGallery();
-                $thumbnail_product->vokasi_stores_id = $products['id'];
-                $thumbnail_product->photos = $path;
+                $thumbnail_product->vokasi_stores_id = $vokasiStore['id'];
+                $thumbnail_product->thumbnail = $path;
                 $thumbnail_product->save();
             }
         }
+
         return redirect()->route('dashboard.vokasi-store.index');
     }
 
@@ -164,6 +169,7 @@ class VokasiStoreController extends Controller
     {
         $product = VokasiStore::findorFail($id);
         $product->delete();
+
         return redirect()->route('dashboard.vokasi-store.index');
     }
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
-            $table->string('photo');
+            $table->string('thumbnail');
             $table->softDeletes();
             $table->timestamps();
         });

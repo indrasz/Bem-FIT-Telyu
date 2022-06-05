@@ -20,10 +20,13 @@ class VokasiStoreGallery extends Model
 
     protected $fillable = [
         'vokasi_stores_id',
-        'photos',
+        'thumbnail',
+        'updated_at',
+        'created_at',
+        'deleted_at',
     ];
 
-    public function destination()
+    public function vokasiStore()
     {
         return $this->belongsTo(VokasiStore::class, 'vokasi_stores_id', 'id');
     }

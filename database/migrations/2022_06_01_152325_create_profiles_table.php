@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('division');
             $table->string('position');
-            $table->string('photo');
+            $table->string('thumbnail');
             $table->softDeletes();
             $table->timestamps();
         });

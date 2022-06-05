@@ -71,14 +71,14 @@
                     <div class="col-12 col-md-9">
                         <div class="carousel gap-4" style="background: #ffffff !important;"
                         data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
-                        
-                        @forelse ($product as $item)
+
+                        @forelse ($vokasiStore as $key => $item)
                             <div class="col-xl-4 col-md-6 mb-xl-0 mb-4 me-3">
                                 <div class="card card-blog card-plain">
                                     <div class="position-relative">
                                         <a class="d-block shadow-xl border-radius-xl">
-                                            @if ($item->gallery)
-                                                <img src="{{ url(Storage::url($item->gallery->first()->photos)) }}" alt="img-blur-shadow" loading="lazy" class=" mx-auto d-block shadow border-radius-xl w-100 h-100" style="max-height: 200px; -o-object-fit: cover; object-fit: cover;">
+                                            @if (isset($item->gallery[0]->thumbnail) != null)
+                                                <img src=" {{ url(Storage::url($item->gallery[0]->thumbnail)) }}" alt="img-blur-shadow" loading="lazy" class=" mx-auto d-block shadow border-radius-xl w-100 h-100" style="max-height: 200px; -o-object-fit: cover; object-fit: cover;">
 
                                             @else
                                                 <img alt="img-blur-shadow" loading="lazy" class="img-fluid shadow border-radius-xl" src="{{ url('https://via.placeholder.com/750x500') }}" />
@@ -113,7 +113,7 @@
                                 Belum ada Product yang diupload
                             </div>
                         @endforelse
-                           
+
 
                         </div>
                     </div>
