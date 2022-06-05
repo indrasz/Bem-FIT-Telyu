@@ -24,44 +24,39 @@
                         <div class="form-group">
                             <div class="row">
                                 @forelse ($thumbnail_product as $thumbnail_item)
-                                    {{-- <div class="mb-2">
-                                        <img src="{{ url(Storage::url($thumbnail_item->photos)) }}" alt="photos" class="inline object-cover w-20 h-20 rounded" for="choose">
 
-                                        <input placeholder="Thumbnail" type="file" name="{{ 'photo['.$thumbnail_item->id.']' }}" id="photo" autocomplete="photo" class="block w-full py-3 pl-5 mt-3 border-gray-300 rounded-md shadow-sm focus:ring-green-500 sm:text-sm">
-                                    </div> --}}
+                                    <div class="col-sm-4 imgUp">
+                                        <div class="imagePreview" style="background-image: url({{ Storage::url($thumbnail_item->thumbnail) }})"></div>
 
-                                        <div class="col-sm-4 imgUp">
-                                            <div class="imagePreview" style="background-image: url({{ Storage::url($thumbnail_item->thumbnail) }})"></div>
-
-                                            <div class="d-flex gap-2">
-                                                <form action="{{ route('dashboard.vokasi-store-gallery.update', $thumbnail_item->id) }}" method="POST"  enctype="multipart/form-data">
-                                                    @method('PUT')
-                                                    @csrf
+                                        <div class="d-flex gap-2">
+                                            <form action="{{ route('dashboard.vokasi-store-gallery.update', $thumbnail_item->id) }}" method="POST"  enctype="multipart/form-data">
+                                                @method('PUT')
+                                                @csrf
 
 
-                                                    <button type="submit" class="btn btn-success ">
-                                                        Update
-                                                    </button>
+                                                <button type="submit" class="btn bg-gradient-success ">
+                                                    Update
+                                                </button>
 
-                                                    <label class="btn btn-secondary">
-                                                        ganti
-                                                        <input type="file" name="{{ 'thumbnails['.$thumbnail_item->id.']' }}" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
-                                                    </label>
+                                                <label class="btn bg-gradient-secondary">
+                                                    ganti
+                                                    <input type="file" name="{{ 'thumbnails['.$thumbnail_item->id.']' }}" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                                </label>
 
-                                                </form>
+                                            </form>
 
-                                                <form action="{{ route('dashboard.vokasi-store-gallery.destroy', $thumbnail_item->id) }}" method="POST">
-                                                    @method('DELETE')
-                                                    @csrf
-                                                    <input hidden type="file" name="{{ 'thumbnails['.$thumbnail_item->id.']' }}" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                            <form action="{{ route('dashboard.vokasi-store-gallery.destroy', $thumbnail_item->id) }}" method="POST">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input hidden type="file" name="{{ 'thumbnails['.$thumbnail_item->id.']' }}" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
 
-                                                    <button type="submit" class="btn btn-danger ">
-                                                        {{-- <i class="fa fa-trash delete bg-danger mx-2"></i> --}}
-                                                        Hapus
-                                                    </button>
-                                                </form>
-                                            </div>
+                                                <button type="submit" class="btn bg-gradient-danger ">
+                                                    {{-- <i class="fa fa-trash delete bg-danger mx-2"></i> --}}
+                                                    Hapus
+                                                </button>
+                                            </form>
                                         </div>
+                                    </div>
 
 
                                 @empty

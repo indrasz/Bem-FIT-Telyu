@@ -78,7 +78,7 @@
                                     <div class="position-relative">
                                         <a class="d-block shadow-xl border-radius-xl">
                                             @if (isset($item->gallery[0]->thumbnail) != null)
-                                                <img src=" {{ url(Storage::url($item->gallery[0]->thumbnail)) }}" alt="img-blur-shadow" loading="lazy" class=" mx-auto d-block shadow border-radius-xl w-100 h-100" style="max-height: 200px; -o-object-fit: cover; object-fit: cover;">
+                                                <img src=" {{ url(Storage::url($item->gallery[0]->thumbnail)) }}" alt="img-blur-shadow" loading="lazy" class="img-fluid shadow border-radius-xl w-100" style="max-height: 200px; -o-object-fit: cover; object-fit: cover;">
 
                                             @else
                                                 <img alt="img-blur-shadow" loading="lazy" class="img-fluid shadow border-radius-xl" src="{{ url('https://via.placeholder.com/750x500') }}" />
@@ -92,9 +92,9 @@
                                             {{ $item->name ?? '' }}
                                         </h5>
                                         </a>
-                                        <div class="mb-4 text-sm text-truncate h-100">
+                                        <span class="d-inline-block text-truncate" style="max-width: 250px;">
                                             {!! $item->description ?? '' !!}
-                                        </div>
+                                        </span>
                                         <div class="d-flex d-sm-block text-start text-xl-center align-items-center">
                                             <a href="{{ route('dashboard.vokasi-store.edit', $item->id) }}" class="btn btn-outline-primary btn-sm mb-0 me-2 me-sm-0">Edit Product</a>
 
