@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BreakingNewsController;
 use App\Http\Controllers\Admin\CreationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VokasiStoreController;
@@ -32,6 +33,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
             Route::resource('vokasi-store', VokasiStoreController::class);
             Route::resource('vokasi-store-gallery', VokasiStoreGalleryController::class);
             Route::resource('advokasi', AdvokasiController::class);
+            Route::resource('department', DepartmentController::class);
             Route::resource('creation', CreationController::class);
             Route::resource('breaking-news', BreakingNewsController::class);
             Route::resource('profile', ProfileController::class);
