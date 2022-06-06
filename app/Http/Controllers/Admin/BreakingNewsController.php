@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\BreakingNew;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use App\Http\Requests\Admin\BreakingNewsRequest;
 
 class BreakingNewsController extends Controller
 {
@@ -14,7 +17,8 @@ class BreakingNewsController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.news.index');
+        $breakingNews = BreakingNew::all();
+        return view('pages.admin.news.index', compact('breakingNews'));
     }
 
     /**
@@ -24,7 +28,7 @@ class BreakingNewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.news.create');
     }
 
     /**
@@ -33,9 +37,13 @@ class BreakingNewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BreakingNewsRequest $request)
     {
-        //
+        $data = $request->all();
+        $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/news', 'public');
+        BreakingNew::create($data);
+
+        return redirect()->route('dashboard.breaking-news.index');
     }
 
     /**
@@ -55,9 +63,9 @@ class BreakingNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(BreakingNew $breakingNews)
     {
-        //
+        return view('pages.admin.news.edit', compact('breakingNews'));
     }
 
     /**
@@ -67,9 +75,29 @@ class BreakingNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BreakingNewsRequest $request, BreakingNew $breakingNews)
     {
-        //
+        $data = $request->all();
+
+        $get_photo = BreakingNew::findOrFail($breakingNews->id);
+
+        if(isset($data['thumbnail'])){
+            $path = 'storage/'.$get_photo['thumbnail'];
+
+            if(File::exists($path)){
+                File::delete($path);
+            }else{
+                File::delete('storage/app/public/'.$get_photo['thumbnail']);
+            }
+
+            $data['thumbnail'] = $request->file('thumbnail')->store(
+                'assets/thumbnail/creation', 'public'
+            );
+        }
+
+        $breakingNews->update($data);
+
+        return redirect()->route('dashboard.breaking-news.index');
     }
 
     /**
@@ -80,6 +108,9 @@ class BreakingNewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $creation = BreakingNew::findorFail($id);
+        $creation->delete();
+
+        return redirect()->route('dashboard.breaking-news.index');
     }
 }

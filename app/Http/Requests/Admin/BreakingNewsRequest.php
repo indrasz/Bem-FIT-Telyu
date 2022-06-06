@@ -13,7 +13,7 @@ class BreakingNewsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class BreakingNewsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'thumbnail' => [
+                'nullable', 'file', 'max:1024',
+            ],
         ];
     }
 }
