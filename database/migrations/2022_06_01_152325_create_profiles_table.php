@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
+            $table->integer('departments_id');
             $table->string('name');
-            $table->string('division');
             $table->string('position');
             $table->string('thumbnail');
             $table->softDeletes();

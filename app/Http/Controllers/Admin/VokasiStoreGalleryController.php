@@ -92,11 +92,11 @@ class VokasiStoreGalleryController extends Controller
                 $thumbnail_product->save();
 
                 // delete old photo thumbnail
-                $data = 'storage/'.$get_photo['photo'];
+                $data = 'storage/'.$get_photo['thumbnails'];
                 if(File::exists($data)){
                     File::delete($data);
                 }else{
-                    File::delete('storage/app/public/'.$get_photo['photo']);
+                    File::delete('storage/app/public/'.$get_photo['thumbnails']);
                 }
             }
         }
@@ -109,30 +109,26 @@ class VokasiStoreGalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $product_galleries = VokasiStoreGallery::findorFail($id);
+
+        if($request->hasfile('thumbnails')){
+            foreach ($request->file('thumbnails') as $key => $file)
+            {
+                $get_photo = VokasiStoreGallery::where('id', $key)->first();
+
+                $data = 'storage/'.$get_photo['thumbnails'];
+                if(File::exists($data)){
+                    File::delete($data);
+                }else{
+                    File::delete('storage/app/public/'.$get_photo['thumbnails']);
+                }
+            }
+        }
+        
         $product_galleries->delete();
 
-        // if($request->hasfile('thumbnails')){
-        //     foreach ($request->file('thumbnails') as $key => $file)
-        //     {
-        //         // get old photo thumbnail
-        //         $get_photo = VokasiStoreGallery::where('id', $key)->first();
-
-
-        //         // delete old photo thumbnail
-        //         $data = 'storage/'.$get_photo['photo'];
-        //         if(File::exists($data)){
-        //             File::delete($data);
-        //         }else{
-        //             File::delete('storage/app/public/'.$get_photo['photo']);
-        //         }
-
-        //         // $product_galleries = VokasiStoreGallery::findorFail($id);
-        //         // $product_galleries->delete();
-        //     }
-        // }
         return redirect()->route('dashboard.vokasi-store.edit', $product_galleries->vokasi_stores_id);
     }
 }

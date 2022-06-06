@@ -132,11 +132,11 @@ class VokasiStoreController extends Controller
                 $thumbnail_product->save();
 
                 // delete old photo thumbnail
-                $data = 'storage/'.$get_photo['photo'];
+                $data = 'storage/'.$get_photo['thumbnails'];
                 if(File::exists($data)){
                     File::delete($data);
                 }else{
-                    File::delete('storage/app/public/'.$get_photo['photo']);
+                    File::delete('storage/app/public/'.$get_photo['thumbnails']);
                 }
             }
         }
