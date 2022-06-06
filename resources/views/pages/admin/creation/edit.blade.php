@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', ' Vokasi Store')
+@section('title', ' Creation')
 
 @section('content')
 
@@ -9,7 +9,7 @@
         <div class="card-header">
             <div class="row align-items-center">
                 <div class="col-8">
-                    <h6 class="mb-0">Add Product </h6>
+                    <h6 class="mb-0">Add Creation </h6>
                 </div>
                 {{-- <div class="col-4 text-end">
                     <a href="#!" class="btn btn-sm bg-gradient-primary mb-0">Settings</a>
@@ -17,56 +17,40 @@
             </div>
         </div>
         <div class="card-body">
-            <h6 class="heading-small text-muted mb-4">Detail Product</h6>
-            <form action="{{ route('dashboard.vokasi-store.store') }}" method="post" enctype="multipart/form-data">
+            <h6 class="heading-small text-muted mb-4">Detail Creation</h6>
+            <form action="{{ route('dashboard.creation.update', [$creation->id]) }}" method="post" enctype="multipart/form-data">
+                
+                @method('PUT')
                 @csrf
                 <div class="row">
+
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="form-control-label" for="product-name">Name</label>
-                            <input type="text" name="name" id="product-name" class="form-control" placeholder="Nama Produk">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            {{-- <label class="form-control-label" for="product-thumbnail">Thumbnail</label>
-                            <input type="file" accept="image/*" id="product-thumbnail" class="form-control" placeholder="Thumbnail">
-                            <div id="newThumbnailRow"></div>
-                            <button class=" btn btn-sm bg-gradient-secondary mb-0 mt-3" id="addThumbnailRow">Tambah Gambar +</button>
-                             --}}
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview"></div>
-                                    <label class="btn btn-success">
+                                    <div class="imagePreview" style="background-image: url({{ Storage::url($creation->thumbnail) }})"></div>
+                                    <label class="btn bg-gradient-success">
                                         Upload
-                                        <input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                        <input type="file" name="thumbnail" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
                                     </label>
                                 </label>
-                                </div><!-- col-2 -->
-                                <i class="fa fa-plus imgAdd btn btn-secondary rounded">
-                                    tambah gambar
-                                </i>
+                                </div>
                             </div><!-- row -->
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-control-label" for="product-price">Price</label>
-                            <input type="number" name="price" id="product-price" class="form-control" placeholder="Harga Produk">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="form-control-label" for="product-link">URL Link</label>
-                            <input type="text" name="url" id="product-link" class="form-control" placeholder="Link URL Product">
+                            <label class="form-control-label" for="product-name">Name</label>
+                            <input type="text" name="name" value="{{ $creation->name ?? '' }}" id="product-name" class="form-control" placeholder="Nama Karya">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-control-label">Description</label>
-                            <textarea id="editor" name="description" class="form-control" placeholder="A few words about this product ..."></textarea>
+                            <textarea id="editor" name="description" class="form-control" placeholder="A few words about this Creation ...">{{ $creation->description ?? '' }}</textarea>
                         </div>
                     </div>
+
                     <div class="col-md-12 text-end">
                         <button type="submit" class=" btn btn-sm bg-gradient-primary mb-0">Save</button>
                     </div>
@@ -88,7 +72,7 @@
     <style>
         .imagePreview {
             width: 100%;
-            height: 250px;
+            height: 300px;
             background-position: center;
             background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
             background-color:#fff;
@@ -126,15 +110,7 @@
     <script>
         CKEDITOR.replace('editor');
     </script>
-
-   
     <script>
-        $(".imgAdd").click(function(){
-        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-4 imgUp"><div class="imagePreview"></div><label class="btn btn-success">Upload<input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del bg-danger mx-2"></i></div>');
-        });
-        $(document).on("click", "i.del" , function() {
-            $(this).parent().remove();
-        });
         $(function() {
             $(document).on("change",".uploadFile", function()
             {
