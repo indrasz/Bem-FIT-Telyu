@@ -111,7 +111,7 @@ class DepartmentController extends Controller
     {
         $department = Department::findorFail($id);
         $department->delete();
-
+        toast()->success('Delete has been success');
         return redirect()->route('dashboard.department.index');
     }
 }

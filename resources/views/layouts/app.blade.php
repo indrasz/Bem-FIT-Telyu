@@ -19,6 +19,8 @@
 
 <body class="g-sidenav-show bg-gray-100">
 
+
+
     {{-- sidebar --}}
     @include('includes.admin.sidebar')
 
@@ -28,6 +30,8 @@
         @include('includes.admin.navbar')
 
         <div class="container-fluid py-4">
+
+            @include('sweetalert::alert')
 
             {{-- content --}}
             @yield('content')

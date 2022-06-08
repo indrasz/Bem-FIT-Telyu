@@ -71,9 +71,9 @@ class VokasiStoreGalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,  $id)
+    public function update(Request $request, VokasiStore $vokasiStore)
     {
-        $product_galleries = VokasiStoreGallery::findorFail($id);
+        $product_galleries = VokasiStoreGallery::findorFail($vokasiStore->id);
 
         if($request->hasfile('thumbnails')){
             foreach ($request->file('thumbnails') as $key => $file)
@@ -126,8 +126,9 @@ class VokasiStoreGalleryController extends Controller
                 }
             }
         }
-        
+
         $product_galleries->delete();
+        toast()->success('Delete has been success');
 
         return redirect()->route('dashboard.vokasi-store.edit', $product_galleries->vokasi_stores_id);
     }

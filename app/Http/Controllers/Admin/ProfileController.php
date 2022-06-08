@@ -116,7 +116,7 @@ class ProfileController extends Controller
     {
         $profile = Profile::findorFail($id);
         $profile->delete();
-
+        toast()->success('Delete has been success');
         return redirect()->route('dashboard.profile.index');
     }
 }

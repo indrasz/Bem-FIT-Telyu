@@ -111,6 +111,7 @@ class CreationController extends Controller
         $creation = Creation::findorFail($id);
         $creation->delete();
 
+        toast()->success('Delete has been success');
         return redirect()->route('dashboard.creation.index');
     }
 }

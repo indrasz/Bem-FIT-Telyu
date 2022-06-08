@@ -169,7 +169,7 @@ class VokasiStoreController extends Controller
     {
         $product = VokasiStore::findorFail($id);
         $product->delete();
-
+        toast()->success('Delete has been success');
         return redirect()->route('dashboard.vokasi-store.index');
     }
 }

@@ -110,7 +110,7 @@ class BreakingNewsController extends Controller
     {
         $creation = BreakingNew::findorFail($id);
         $creation->delete();
-
+        toast()->success('Delete has been success');
         return redirect()->route('dashboard.breaking-news.index');
     }
 }
