@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VokasiStoreController;
 use App\Http\Controllers\Admin\VokasiStoreGalleryController;
+use App\Http\Controllers\Frontend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,7 @@ use App\Http\Controllers\Admin\VokasiStoreGalleryController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {

@@ -55,7 +55,9 @@
                 </g>
               </svg>
             </div>
+
             <span class="nav-link-text ms-1">Advokasi</span>
+            <span class="nav-link-text badge bg-gradient-primary rounded-pill ms-auto">1</span>
           </a>
         </li>
         <li class="nav-item">
@@ -97,7 +99,7 @@
             >
               <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <title>advokasi</title>
+                  <title>department</title>
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
                       <g transform="translate(1716.000000, 291.000000)">
