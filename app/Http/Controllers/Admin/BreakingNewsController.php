@@ -43,6 +43,7 @@ class BreakingNewsController extends Controller
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/news', 'public');
         BreakingNew::create($data);
 
+        toast()->success('Save has been success');
         return redirect()->route('dashboard.breaking-news.index');
     }
 
@@ -96,7 +97,7 @@ class BreakingNewsController extends Controller
         }
 
         $breakingNews->update($data);
-
+        toast()->success('Update data has been success');
         return redirect()->route('dashboard.breaking-news.index');
     }
 

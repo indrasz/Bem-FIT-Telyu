@@ -26,7 +26,7 @@
                         <div class="form-group">
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}')"></div>
                                     <label class="btn bg-gradient-success">
                                         Upload
                                         <input type="file" name="thumbnail" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
@@ -39,7 +39,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label" for="product-name">Name</label>
-                            <input type="text" name="name" id="product-name" class="form-control" placeholder="Nama Produk">
+                            <input type="text" name="name" id="product-name" class="form-control" placeholder="Nama Department">
                         </div>
                     </div>
 
@@ -66,7 +66,6 @@
             width: 100%;
             height: 300px;
             background-position: center;
-            background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
             background-color:#fff;
             background-size: cover;
             background-repeat:no-repeat;

@@ -30,4 +30,11 @@ class DepartmentRequest extends FormRequest
             ],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'thumbnail.max' => "Maximum file size to upload is 8MB (1024 KB). If you are uploading a photo, try to reduce its resolution to make it under 1MB"
+        ];
+    }
 }

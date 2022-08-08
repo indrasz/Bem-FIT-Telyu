@@ -9,7 +9,7 @@
         <div class="card-header">
             <div class="row align-items-center">
                 <div class="col-8">
-                    <h6 class="mb-0">Add Product </h6>
+                    <h6 class="heading-small text-muted ">Detail Product</h6>
                 </div>
                 {{-- <div class="col-4 text-end">
                     <a href="#!" class="btn btn-sm bg-gradient-primary mb-0">Settings</a>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="card-body">
-            <h6 class="heading-small text-muted mb-4">Detail Product</h6>
+
             <form action="{{ route('dashboard.vokasi-store.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
@@ -29,14 +29,9 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            {{-- <label class="form-control-label" for="product-thumbnail">Thumbnail</label>
-                            <input type="file" accept="image/*" id="product-thumbnail" class="form-control" placeholder="Thumbnail">
-                            <div id="newThumbnailRow"></div>
-                            <button class=" btn btn-sm bg-gradient-secondary mb-0 mt-3" id="addThumbnailRow">Tambah Gambar +</button>
-                             --}}
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}')"></div>
                                     <label class="btn btn-success">
                                         Upload
                                         <input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
@@ -89,8 +84,8 @@
         .imagePreview {
             width: 100%;
             height: 250px;
+            background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}');
             background-position: center;
-            background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
             background-color:#fff;
             background-size: cover;
             background-repeat:no-repeat;
@@ -127,10 +122,10 @@
         CKEDITOR.replace('editor');
     </script>
 
-   
+
     <script>
         $(".imgAdd").click(function(){
-        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-4 imgUp"><div class="imagePreview"></div><label class="btn btn-success">Upload<input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del bg-danger mx-2"></i></div>');
+        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-4 imgUp"><div class="imagePreview rounded-3"></div><label class="btn btn-success">Upload<input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del bg-danger mx-2"></i></div>');
         });
         $(document).on("click", "i.del" , function() {
             $(this).parent().remove();

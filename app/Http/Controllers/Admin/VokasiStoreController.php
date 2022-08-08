@@ -63,7 +63,7 @@ class VokasiStoreController extends Controller
             }
         }
 
-        // toast()->success('Save has been success');
+        toast()->success('Save has been success');
         return redirect()->route('dashboard.vokasi-store.index');
     }
 
@@ -91,11 +91,6 @@ class VokasiStoreController extends Controller
         // dd($vokasiStore);
         return view('pages.admin.vokasi-store.edit', compact('vokasiStore', 'thumbnail_product'));
 
-
-        // return view('pages.admin.vokasi-store.edit',[
-        //     'items' => $product,
-        //     'thumbnail_product' => $thumbnail_product
-        // ]);
     }
 
     /**
@@ -156,6 +151,7 @@ class VokasiStoreController extends Controller
             }
         }
 
+        toast()->success('Update data has been success');
         return redirect()->route('dashboard.vokasi-store.index');
     }
 

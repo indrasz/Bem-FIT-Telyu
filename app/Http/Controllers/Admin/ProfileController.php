@@ -46,6 +46,7 @@ class ProfileController extends Controller
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/profile', 'public');
         Profile::create($data);
 
+        toast()->success('Save has been success');
         return redirect()->route('dashboard.profile.index');
 
     }
@@ -103,6 +104,7 @@ class ProfileController extends Controller
 
         $profile->update($data);
 
+        toast()->success('Update data has been success');
         return redirect()->route('dashboard.profile.index');
     }
 

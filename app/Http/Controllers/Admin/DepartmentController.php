@@ -43,6 +43,7 @@ class DepartmentController extends Controller
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/department', 'public');
         Department::create($data);
 
+        toast()->success('Save has been success');
         return redirect()->route('dashboard.department.index');
     }
 
@@ -96,6 +97,8 @@ class DepartmentController extends Controller
         }
 
         $department->update($data);
+
+        toast()->success('Update data has been success');
 
         return redirect()->route('dashboard.department.index');
 

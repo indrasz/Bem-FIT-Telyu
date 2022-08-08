@@ -19,7 +19,7 @@
         <div class="card-body">
             <h6 class="heading-small text-muted mb-4">Detail Creation</h6>
             <form action="{{ route('dashboard.creation.update', [$creation->id]) }}" method="post" enctype="multipart/form-data">
-                
+
                 @method('PUT')
                 @csrf
                 <div class="row">
@@ -28,7 +28,7 @@
                         <div class="form-group">
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview" style="background-image: url({{ Storage::url($creation->thumbnail) }})"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url({{ Storage::url($creation->thumbnail) }})"></div>
                                     <label class="btn bg-gradient-success">
                                         Upload
                                         <input type="file" name="thumbnail" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">

@@ -42,7 +42,8 @@ class CreationController extends Controller
         $data = $request->all();
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/creation', 'public');
         Creation::create($data);
-
+        
+        toast()->success('Save has been success');
         return redirect()->route('dashboard.creation.index');
     }
 
@@ -97,6 +98,7 @@ class CreationController extends Controller
 
         $creation->update($data);
 
+        toast()->success('Update data has been success');
         return redirect()->route('dashboard.creation.index');
     }
 

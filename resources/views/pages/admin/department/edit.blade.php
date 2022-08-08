@@ -27,7 +27,7 @@
                         <div class="form-group">
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview" style="background-image: url({{ Storage::url($department->thumbnail) }})"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url({{ Storage::url($department->thumbnail) }})"></div>
                                     <label class="btn bg-gradient-success">
                                         Upload
                                         <input type="file" name="thumbnail" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-control-label" for="product-name">Name</label>
-                            <input type="text" name="name" id="product-name" class="form-control" value="{{ $department->name ?? '' }}" placeholder="Nama Produk">
+                            <input type="text" name="name" id="product-name" class="form-control" value="{{ $department->name ?? '' }}" placeholder="Nama Department">
                         </div>
                     </div>
 
