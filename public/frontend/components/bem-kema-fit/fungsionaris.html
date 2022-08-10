@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fungsionaris</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+
+    <!-- flickity carousel css -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- script -->
+    <script src="../../vendor/js/bootstrap.min.js"></script>
+
+    <!-- flickity carousel script -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- instagram load script -->
+    <script src="https://cdn2.woxo.tech/a.js#62767a4c46f7cf00284e3501" async data-usrc>
+    </script>
+</head>
+
+<body>
+
+    <!-- fungsionaris section -->
+    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #ffffff">
+
+        <style>
+            .fungsionaris .kabinet-logo {
+                width: 50%;
+            }
+
+            .fungsionaris .fungsionaris-profile .card-fungsionaris {
+                background: linear-gradient(144.46deg, rgba(249, 249, 249, 0.15) -4.67%, rgba(249, 249, 249, 0.1) 102.1%);
+                box-shadow: 16px 27px 30px -22px rgba(106, 48, 147, 0.2);
+                backdrop-filter: blur(20px) saturate(120%);
+                /* backdrop-filter: blur(190px); */
+                /* Note: backdrop-filter has minimal browser support */
+
+                border-radius: 15px;
+            }
+
+            .fungsionaris .fungsionaris-profile .background-animation-fungsionaris-1 {
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                position: absolute;
+                right: 20%;
+                top: 0;
+                animation: slideshow1 5s linear infinite;
+            }
+
+            .fungsionaris .fungsionaris-profile .background-animation-fungsionaris-2 {
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                position: absolute;
+                left: 0;
+                top: 0;
+                animation: slideshow2 5s linear infinite;
+            }
+
+            @keyframes slideshow1 {
+                0% {
+                    right: 20%;
+                }
+
+
+                70% {
+                    right: -10%;
+                }
+
+            }
+
+            @keyframes slideshow2 {
+                0% {
+                    left: 0;
+                }
+
+
+                70% {
+                    left: -10%;
+                }
+
+            }
+        </style>
+
+        <div class="fungsionaris container position-relative pb-5">
+            <div class="d-flex justify-content-center p-3">
+                <img src="../../images/logo-kabinet.png" alt="kabinet-titik-terang" class="kabinet-logo">
+            </div>
+            <div class="p-3 background-section">
+                <div class="d-flex justify-content-center">
+                    <img src="../../images/bg-fungsionaris.png" alt="background" class="position-absolute d-none d-sm-block" width="1098">
+                </div>
+                <div class="text-center">
+                    <h3 class="semibold-text text-uppercase fs-32">
+                        fungsionaris
+                    </h3>
+                    <h6 class="regular-text text-uppercase fs-18">
+                        BEM KEMA FIT KABINET TITIK TERANG
+                    </h6>
+                </div>
+
+
+                <div class="fungsionaris-profile">
+                    <div class="background-animation-fungsionaris-1"
+                        style="background: url('../../images/bg-fungsionaris-2.svg'); background-position: bottom; background-repeat: no-repeat; background-size: 40%; width: 70%; height: 90%;">
+                    </div>
+                    <div class="background-animation-fungsionaris-2"
+                        style="background: url('../../images/bg-fungsionaris-2.svg'); background-position: bottom; background-repeat: no-repeat; background-size: 40%; width: 70%; height: 90%;">
+                    </div>
+                    <div class="carousel m-md-5 m-3"
+                        data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
+                        <div class="col-3 card-fungsionaris text-center pt-4 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-3 card-fungsionaris text-center pt-4 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="carousel m-md-5 m-3"
+                        data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
+                        <div class="card-fungsionaris text-center pt-4 w-25 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel m-md-5 m-3"
+                        data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
+                        <div class="card-fungsionaris text-center pt-4 w-25 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="card-fungsionaris text-center pt-4 w-25 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="card-fungsionaris text-center pt-4 w-25 mx-5">
+                            <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            <div class="bg-white rounded-3 px-3 py-2">
+                                <h4 class="medium-text fs-24 text-capitalize">
+                                    Gubernur FIT
+                                </h4>
+                                <h6 class="regular-text grey-color fs-18 text-capitalize">
+                                    Tengku Ahmad
+                                </h6>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- 
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="card-fungsionaris text-center p-2 w-50">
+                                <img src="../../images/image-user-2.png" alt="image-user" width="180">
+                            </div>
+                        </div>
+
+                        <div class="col-6 d-flex justify-content-start">
+                            <div class="card-fungsionaris text-center p-2 w-50">
+                                <img src="../../images/image-user.png" alt="image-user" width="180">
+                            </div>
+                        </div> -->
+
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- end fungsionaris section -->
+</body>
+
+</html>
