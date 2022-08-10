@@ -55,7 +55,7 @@ class BreakingNewsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
