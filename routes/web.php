@@ -24,6 +24,7 @@ use App\Http\Controllers\Frontend\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/bem-fit', [HomeController::class, 'toPageBemFit'])->name('bem-fit');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {

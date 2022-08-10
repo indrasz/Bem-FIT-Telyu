@@ -63,21 +63,21 @@
                         Media Partner
                     </a>
                     <a class="btn btn-video-profile rounded-pill px-4 py-2 ">
-                        <img src="images/btn-display.svg" alt="button-display">
+                        <img src="/frontend/images/btn-display.svg" alt="button-display">
                         Video Profile
                     </a>
                 </div>
            </div>
 
             <div class="col-12 col-md-6 text-center ">
-                <img src="images/banner-bem.png" alt="banner-bem" class="image-banner-home">
+                <img src="/frontend/images/banner-bem.png" alt="banner-bem" class="image-banner-home">
 
                 <div class="d-flex justify-content-center mt-5 gap-2 d-sm-none d-md-none d-lg-none">
                     <a class="btn btn-medpart rounded-pill py-2">
                         Media Partner
                     </a>
                     <a class="btn btn-video-profile rounded-pill py-2">
-                        <img src="images/btn-display.svg" alt="button-display">
+                        <img src="/frontend/images/btn-display.svg" alt="button-display">
                         Video Profile
                     </a>
                 </div>
@@ -116,7 +116,7 @@
         <div class="row justify-content-between p-4">
 
             <div class="col-12 col-md-6 text-center ps-lg-4">
-                <img src="images/bg-visi.png" alt="visi-banner" class="image-banner-visi">
+                <img src="/frontend/images/bg-visi.png" alt="visi-banner" class="image-banner-visi">
             </div>
 
             <div class="col-12 col-md-6 mt-5">
@@ -167,7 +167,7 @@
                 <div class=" header-text text-uppercase text-sm-start  text-center">
                     Misi
                     <div class="d-flex d-sm-none justify-content-center">
-                        <img src="images/bg-misi.png" alt="misi-banner" class="image-banner-misi d-block d-sm-none">
+                        <img src="/frontend/images/bg-misi.png" alt="misi-banner" class="image-banner-misi d-block d-sm-none">
                     </div>
 
                 </div>
@@ -226,7 +226,7 @@
             </div>
 
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center text-center">
-                <img src="images/bg-misi.png" alt="misi-banner" class="image-banner-misi d-none d-sm-block">
+                <img src="/frontend/images/bg-misi.png" alt="misi-banner" class="image-banner-misi d-none d-sm-block">
 
             </div>
         </div>
@@ -245,7 +245,7 @@
     <div class="header-karya container-xxl position-relative" style="font-family: 'Poppins', sans-serif">
         <div class="row header-text justify-content-center text-center p-md-4 p-2">
             Our Profile
-            <img src="images/banner_profile.png" alt="Banner home" class="mt-4">
+            <img src="/frontend/images/banner_profile.png" alt="Banner home" class="mt-4">
         </div>
     </div>
 </section>
@@ -292,7 +292,7 @@
         <div class="row justify-content-between p-4">
 
             <div class="col-12 col-md-6 text-center ps-lg-4">
-                <img src="images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
+                <img src="/frontend/images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
             </div>
 
             <div class="col-12 col-md-6 mt-5">
