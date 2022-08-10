@@ -2,7 +2,7 @@
 
 
 <link rel="stylesheet" href="{{ asset('frontend/vendor/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('frontend/styles/main.css') }}">
+<link rel="stylesheet" href="/frontend/styles/main.css">
 
 <!-- flickity carousel css -->
 <link rel="stylesheet" href="{{ url('https://unpkg.com/flickity@2/dist/flickity.min.css') }}">

@@ -18,6 +18,7 @@
 </head>
 
 <body >
+    @include('includes.frontend.main-style')
 
     {{-- navbar --}}
     @include('includes.frontend.navbar')
