@@ -5,11 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdvokasiController extends Controller
 {
     public function index()
     {
-        return view('pages.frontend.index');
+        return view('pages.frontend.advokasi');
     }
-
 }

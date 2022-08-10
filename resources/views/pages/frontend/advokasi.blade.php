@@ -14,7 +14,7 @@
     </style>
     <div class="header-karya container-fluid  position-relative" style="font-family: 'Poppins', sans-serif">
         <div class="row justify-content-between p-md-4 ">
-            <img src="images/header-banner-advokasi.png" alt="Banner home">
+            <img src="/frontend/images/header-banner-advokasi.png" alt="Banner home">
         </div>
     </div>
 </section>
@@ -43,7 +43,7 @@
                 <div class="college-total mb-3">
                     845
                 </div>
-                <img src="images/ic-received.png" alt="college-logo" width="70" class="college-image ">
+                <img src="/frontend/images/ic-received.png" alt="college-logo" width="70" class="college-image ">
                 <div class="mt-3 text-uppercase ">
                     diterima
                 </div>
@@ -52,7 +52,7 @@
                 <div class="college-total mb-3">
                     150
                 </div>
-                <img src="images/ic-pending.png" alt="ormawa-logo" width="70" class="college-image">
+                <img src="/frontend/images/ic-pending.png" alt="ormawa-logo" width="70" class="college-image">
                 <div class="mt-3 text-uppercase">
                     pending
                 </div>
@@ -61,7 +61,7 @@
                 <div class="college-total mb-3 ">
                     640
                 </div>
-                <img src="images/ic-approved.png" alt="prodi-logo" width="70" class="d-none d-sm-block college-image">
+                <img src="/frontend/images/ic-approved.png" alt="prodi-logo" width="70" class="d-none d-sm-block college-image">
                 <div class="mt-3 text-uppercase">
                     disetujui
                 </div>
@@ -70,7 +70,7 @@
                 <div class="college-total mb-3 ">
                     55
                 </div>
-                <img src="images/ic-rejected.png" alt="prodi-logo" width="70" class="d-none d-sm-block college-image">
+                <img src="/frontend/images/ic-rejected.png" alt="prodi-logo" width="70" class="d-none d-sm-block college-image">
                 <div class="mt-3 text-uppercase">
                     ditolak
                 </div>
@@ -83,7 +83,7 @@
                 <div class="college-total mb-3">
                         3500
                 </div>
-                <img src="images/ic-received.png" alt="college-logo" width="70" class="college-image ">
+                <img src="/frontend/images/ic-received.png" alt="college-logo" width="70" class="college-image ">
                 <div class="mt-3 text-uppercase ">
                     Mahasiswa <br> Aktif
                 </div>
@@ -92,7 +92,7 @@
                 <div class="college-total mb-3">
                     14
                 </div>
-                <img src="images/ic-pending.png" alt="ormawa-logo" width="70" class="college-image">
+                <img src="/frontend/images/ic-pending.png" alt="ormawa-logo" width="70" class="college-image">
                 <div class="mt-3 text-uppercase">
                     Ormawa
                 </div>
@@ -101,7 +101,7 @@
                 <div class="college-total mb-3 ">
                     12
                 </div>
-                <img src="images/ic-approved.png" alt="prodi-logo" width="70" class="college-image">
+                <img src="/frontend/images/ic-approved.png" alt="prodi-logo" width="70" class="college-image">
                 <div class="mt-3 text-uppercase">
                     Prodi
                 </div>
@@ -111,7 +111,7 @@
                 <div class="college-total mb-3 ">
                     12
                 </div>
-                <img src="images/ic-rejected.png" alt="prodi-logo" width="70" class="college-image">
+                <img src="/frontend/images/ic-rejected.png" alt="prodi-logo" width="70" class="college-image">
                 <div class="mt-3 text-uppercase">
                     Prodi
                 </div>
@@ -150,7 +150,7 @@
         <div class="row justify-content-between p-4">
 
             <div class="col-12 col-md-6 text-center ps-lg-4">
-                <img src="images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
+                <img src="/frontend/images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
             </div>
 
             <div class="col-12 col-md-6 mt-5">

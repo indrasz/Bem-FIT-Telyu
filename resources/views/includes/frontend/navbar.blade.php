@@ -164,7 +164,7 @@
                         <a class="nav-link" href="#">CONTACT</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="#">VOKASI STORE</a>
+                        <a class="nav-link {{ (request()->is('vokasi-store')) ? 'active' : '' }}" href="{{ route('vokasi-store') }}">VOKASI STORE</a>
                     </li>
                 </ul>
             </div>

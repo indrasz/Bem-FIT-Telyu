@@ -59,7 +59,7 @@
            </div>
 
             <div class="col-12 col-md-6 text-center ">
-                <img src="images/news-banner.png" alt="banner-home" class="image-banner-home">
+                <img src="/frontend/images/news-banner.png" alt="banner-home" class="image-banner-home">
 
                 <div class="d-flex justify-content-center mt-5 gap-2 d-sm-none d-md-none d-lg-none">
                     <a class="btn btn-medpart rounded-pill py-2">
@@ -97,7 +97,7 @@
             Berita yang sedang hangat diperbincangkan
         </div>
         <div class="row justify-content-center p-md-4 p-2">
-            <img src="images/banner-hot-news.png" alt="Banner home">
+            <img src="/frontend/images/banner-hot-news.png" alt="Banner home">
         </div>
     </div>
 </section>
@@ -150,7 +150,7 @@
 
 
             <a href="#">
-                <img src="images/image-preview.png" alt="preview" class="image-preview mx-3"  />
+                <img src="/frontend/images/image-preview.png" alt="preview" class="image-preview mx-3"  />
             </a>
 
         </div>

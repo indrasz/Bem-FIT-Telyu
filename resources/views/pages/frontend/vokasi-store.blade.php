@@ -14,7 +14,7 @@
     </style>
     <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
         <div class="row justify-content-between p-md-4 p-2">
-            <img src="images/vokasi-store-banner.png" alt="Banner Vokasi Store">
+            <img src="/frontend/images/vokasi-store-banner.png" alt="Banner Vokasi Store">
         </div>
     </div>
 </section>
@@ -92,7 +92,7 @@
             <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                 <div class="">
                     <div class="">
-                        <img src="images/image-preview.png" alt="preview" class="image-preview"  />
+                        <img src="/frontend/images/image-preview.png" alt="preview" class="image-preview"  />
                     </div>
                     <div class="px-4 mt-2">
                         <div class="title p-md-2 mt-3">title</div>
@@ -181,7 +181,7 @@
             <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                 <div class="">
                     <div class="">
-                        <img src="images/image-preview.png" alt="preview" class="image-preview"  />
+                        <img src="/frontend/images/image-preview.png" alt="preview" class="image-preview"  />
                     </div>
                     <div class="px-4 mt-2">
                         <div class="title p-md-2 mt-3">title</div>

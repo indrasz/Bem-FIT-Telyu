@@ -14,7 +14,7 @@
     </style>
     <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
         <div class="row justify-content-between p-md-4 p-2">
-            <img src="images/header-banner-medpart.png" alt="Banner home">
+            <img src="/frontend/images/header-banner-medpart.png" alt="Banner home">
         </div>
     </div>
 </section>
@@ -48,7 +48,7 @@
         <div class="row justify-content-between p-4">
 
             <div class="col-12 col-md-6 text-center ps-lg-4">
-                <img src="images/bg-syarat.png" alt="advokasi-banner" class="image-banner-advokasi">
+                <img src="/frontend/images/bg-syarat.png" alt="advokasi-banner" class="image-banner-advokasi">
             </div>
 
             <div class="col-12 col-md-6 mt-5">
@@ -107,7 +107,7 @@
             </div>
 
             <div class="col-12 col-md-6 align-items-center text-center">
-                <img src="images/bg-fee.png" alt="medpart-banner" class="image-banner-medpart">
+                <img src="/frontend/images/bg-fee.png" alt="medpart-banner" class="image-banner-medpart">
             </div>
         </div>
     </div>

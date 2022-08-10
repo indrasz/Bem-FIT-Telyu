@@ -66,7 +66,7 @@
         style="font-family: 'Poppins', sans-serif">
         <div class="row">
             <div class="col-12 col-md-8 p-3">
-                <img src="images/image-product.png" alt="product image" class="image-product w-100 h-100">
+                <img src="/frontend/images/image-product.png" alt="product image" class="image-product w-100 h-100">
                 <div class="title py-3 mt-3">
                     Baju Kemeja Pria
                 </div>

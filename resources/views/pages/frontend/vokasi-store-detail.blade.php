@@ -39,7 +39,7 @@
         style="font-family: 'Poppins', sans-serif">
         <div class="row">
             <div class="col-12 col-md-7 p-3">
-                <img src="images/image-product.png" alt="product image" class="image-product w-100 h-100">
+                <img src="/frontend/images/image-product.png" alt="product image" class="image-product w-100 h-100">
             </div>
             <div class="col-12 col-md-5 p-3">
                 <div class="title py-3">
@@ -132,7 +132,7 @@
             <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                 <div class="">
                     <div class="">
-                        <img src="images/image-preview.png" alt="preview" class="image-preview"  />
+                        <img src="/frontend/images/image-preview.png" alt="preview" class="image-preview"  />
                     </div>
                     <div class="px-4 mt-2">
                         <div class="title p-md-2 mt-3">title</div>
