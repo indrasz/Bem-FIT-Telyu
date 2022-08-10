@@ -12,11 +12,6 @@ class HomeController extends Controller
         return view('pages.frontend.index');
     }
 
-    public function toPageBemFit()
-    {
-        return view('pages.frontend.bem-fit');
-    }
-
     public function toPageAdvokasi()
     {
         return view('pages.frontend.advokasi');

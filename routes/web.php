@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VokasiStoreController;
 use App\Http\Controllers\Admin\VokasiStoreGalleryController;
+use App\Http\Controllers\Frontend\BemController;
 use App\Http\Controllers\Frontend\HomeController;
 
 /*
@@ -24,7 +25,7 @@ use App\Http\Controllers\Frontend\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/bem-fit', [HomeController::class, 'toPageBemFit'])->name('bem-fit');
+Route::get('/bem-fit', [BemController::class, 'index'])->name('bem-fit');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
