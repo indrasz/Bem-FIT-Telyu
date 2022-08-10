@@ -32,6 +32,7 @@ use App\Http\Controllers\Frontend\VokasiStoreController as FrontendVokasiStoreCo
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/bem-fit', [BemController::class, 'index'])->name('bem-fit');
 Route::get('/advokasi', [FrontendAdvokasiController::class, 'index'])->name('advokasi');
+Route::post('/advokasi', [FrontendAdvokasiController::class, 'store'])->name('advokasi-store');
 Route::get('/creation', [FrontendCreationController::class, 'index'])->name('creation');
 Route::get('/medpart', [MedpartController::class, 'index'])->name('medpart');
 Route::get('/news', [FrontendBreakingNewsController::class, 'index'])->name('news');

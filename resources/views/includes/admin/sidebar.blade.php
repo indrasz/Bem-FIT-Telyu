@@ -57,7 +57,7 @@
             </div>
 
             <span class="nav-link-text ms-1">Advokasi</span>
-            <span class="nav-link-text badge bg-gradient-primary rounded-pill ms-auto">1</span>
+            <span class="nav-link-text badge bg-gradient-primary rounded-pill ms-auto">{{ count($advokasi) }}</span>
           </a>
         </li>
         <li class="nav-item">

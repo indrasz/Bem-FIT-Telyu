@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('advokasis', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
             $table->string('category');
             $table->longText('message');
-            $table->string('slug')->unique();
+            $table->string('status')->default('PENDING');
             $table->softDeletes();
             $table->timestamps();
         });

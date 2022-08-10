@@ -436,13 +436,19 @@
 
     <!-- podcast section -->
     <section class="h-100 w-100" style="box-sizing: border-box; background-color: #ffffff">
+        <style>
+            .btn-podcast {
+                background: #C8238B;
+                border-radius: 15px;
+            }
+        </style>
         <div class="podcast-bem-fit container-xxl  position-relative pb-5" style="font-family: 'Poppins', sans-serif">
-            <div class="title-section justify-content-center text-center">
+            <div class="title-section semibold-text fs-36 justify-content-center text-center">
                 Listen Our Spotify
             </div>
             <div class="podcast-link mt-4 p-4">
                 <div class="carousel gap-4" style="background: #ffffff !important;"
-                    data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": true, "pageDots": true, "prevNextButtons": true, "draggable": false }'>
+                    data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": true, "pageDots": true, "prevNextButtons": false, "draggable": false }'>
 
                     <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/show/2MUDGIF4iIxdvq1iGiWkBF?utm_source=generator"
@@ -455,9 +461,9 @@
                 </div>
             </div>
             <div class="title-section justify-content-center text-center mt-4">
-                <button class="btn btn-podcast w-25 py-3">
+                <a class="btn btn-podcast text-white semibold-text fs-18 w-50 py-3">
                     Dengarkan yang lainnya
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -467,8 +473,8 @@
     <section class="h-100 w-100" style="box-sizing: border-box; background-color: #ffffff">
         <div class="insta-bem-fit container-xxl  position-relative pb-5" style="font-family: 'Poppins', sans-serif">
             <!-- <div class="title-section justify-content-start text-start px-4">
-                Instagram Feed
-            </div> -->
+                    Instagram Feed
+                </div> -->
 
             <div loading="lazy" data-mc-src="5782e99c-c420-40ee-9276-37b3f6be9822#instagram"></div>
 
@@ -519,9 +525,9 @@
                     </div>
 
                     <div class="d-flex mt-4 gap-3 justify-content-center justify-content-md-start">
-                        <button class="btn btn-report text-uppercase rounded-pill px-5 py-3">
+                        <a href="{{ route('advokasi') }}" class="btn btn-report text-uppercase rounded-pill px-5 py-3">
                             Lapor
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -568,9 +574,9 @@
                     </div>
 
                     <div class="d-none d-sm-flex mt-4 gap-3 float-end">
-                        <button class="btn btn-report text-uppercase rounded-pill px-5 py-3">
+                        <a href="{{ route('medpart') }}" class="btn btn-report text-uppercase rounded-pill px-5 py-3">
                             lanjut
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -578,7 +584,8 @@
                     <img src="/frontend/images/medpart-banner.png" alt="medpart-banner" class="image-banner-medpart">
 
                     <div cllas="d-flex gap-3 mt-5 justify-content-center">
-                        <a class="btn btn-report rounded-pill text-uppercase py-3 px-5 mt-5 d-sm-none">
+                        <a href="{{ route('medpart') }}"
+                            class="btn btn-report rounded-pill text-uppercase py-3 px-5 mt-5 d-sm-none">
                             lanjut
                         </a>
                     </div>

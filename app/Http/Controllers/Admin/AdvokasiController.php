@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\AdvokasiRequest;
+use App\Models\Advokasi;
 use Illuminate\Http\Request;
 
 class AdvokasiController extends Controller
@@ -14,7 +16,8 @@ class AdvokasiController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.advokasi.index');
+        $advokasi = Advokasi::all();
+        return view('pages.admin.advokasi.index', compact('advokasi'));
     }
 
     /**
@@ -24,7 +27,7 @@ class AdvokasiController extends Controller
      */
     public function create()
     {
-        //
+        abort(404);
     }
 
     /**
@@ -55,9 +58,9 @@ class AdvokasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Advokasi $advokasi)
     {
-        //
+        return view('pages.admin.advokasi.edit', compact('advokasi'));
     }
 
     /**
@@ -67,9 +70,13 @@ class AdvokasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AdvokasiRequest $request, Advokasi $advokasi)
     {
-        //
+        $data = $request->all();
+        $advokasi->update($data);
+
+        toast()->success('Update data has been success');
+        return redirect()->route('dashboard.advokasi.index');
     }
 
     /**
@@ -80,6 +87,9 @@ class AdvokasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $advokasi = Advokasi::findorFail($id);
+        $advokasi->delete();
+        toast()->success('Delete has been success');
+        return redirect()->route('dashboard.department.index');
     }
 }
