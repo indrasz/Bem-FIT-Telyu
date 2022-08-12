@@ -38,7 +38,7 @@
                                             {{ $item->name ?? '' }}
                                         </h5>
                                         </a>
-                                        <span class="d-inline-block text-truncate" style="max-width: 250px;">
+                                        <span class="d-inline-block text-truncate" style="max-width: 250px; max-height: 45px;">
                                             {!! $item->description ?? '' !!}
                                         </span>
                                         <div class="d-flex d-sm-block text-start text-xl-center align-items-center">

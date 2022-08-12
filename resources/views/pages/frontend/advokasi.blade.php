@@ -161,15 +161,13 @@
                     <img src="/frontend/images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
                 </div>
 
-                <div class="col-12 col-md-6 mt-5">
+                <div class="col-12 col-md-6 mt-5 mt-sm-0">
                     <div class="header-text text-uppercase">
                         Advokasi
                     </div>
                     <div class="title-text mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc
-                        dui. Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan #TitikTerang, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
+
                     </div>
 
                 </div>

@@ -273,7 +273,6 @@
                 data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
                 <!-- Card Container 1 -->
-
                 @forelse ($news as $key => $item)
                     <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                         <div class="">
@@ -290,8 +289,8 @@
                             @endif
 
                             <div class="px-2 mt-2">
-                                <div class="title p-md-2 mt-3"> {{ $item->name ?? '' }}</div>
-                                <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
+                                <div class="title p-md-2 mt-3 text-capitalize"> {{ $item->name ?? '' }}</div>
+                                <div class="text-preview p-md-2 text-capitalize text-wrap text-truncate mt-2 mt-sm-0">
                                     {!! $item->description ?? '' !!}</div>
                             </div>
                             <div class="d-flex justify-content-center mt-3 pb-3">
@@ -397,15 +396,16 @@
             </div>
 
             <div class="carousel gap-4" style="background: #ffffff !important;"
-                data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
+                data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
                 <!-- Card Container 1 -->
                 @forelse ($creation as $key => $item)
-                    <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
+                    <div class="box-border bg-white rounded-2xl hot-creation-news-card mb-4">
                         <div class="">
                             @if (isset($item->thumbnail) != null)
                                 <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
                                     class="d-none d-sm-block image-preview" />
+                                    
                                 <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
                                     class="d-sm-none image-mobile-preview" />
                             @else
@@ -416,8 +416,8 @@
                             @endif
 
                             <div class="px-2 mt-2">
-                                <div class="title p-md-2 mt-3"> {{ $item->name ?? '' }}</div>
-                                <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
+                                <div class="title p-md-2 mt-3 text-capitalize"> {{ $item->name ?? '' }}</div>
+                                <div class="text-preview p-md-2 text-capitalize text-wrap text-truncate mt-2 mt-sm-0">
                                     {!! $item->description ?? '' !!}</div>
                             </div>
                             <div class="d-flex justify-content-center mt-3 pb-3">
@@ -516,15 +516,13 @@
                     <img src="/frontend/images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
                 </div>
 
-                <div class="col-12 col-md-6 mt-5">
+                <div class="col-12 col-md-6 ">
                     <div class="header-text text-uppercase">
                         Advokasi
                     </div>
                     <div class="title-text mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc
-                        dui. Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan #TitikTerang, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
+
                     </div>
 
                     <div class="d-flex mt-4 gap-3 justify-content-center justify-content-md-start">

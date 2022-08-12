@@ -34,6 +34,7 @@ Route::get('/bem-fit', [BemController::class, 'index'])->name('bem-fit');
 Route::get('/advokasi', [FrontendAdvokasiController::class, 'index'])->name('advokasi');
 Route::post('/advokasi', [FrontendAdvokasiController::class, 'store'])->name('advokasi-store');
 Route::get('/creation', [FrontendCreationController::class, 'index'])->name('creation');
+Route::get('/creation/{id}', [FrontendCreationController::class, 'index'])->name('creation-detail');
 Route::get('/medpart', [MedpartController::class, 'index'])->name('medpart');
 Route::get('/news', [FrontendBreakingNewsController::class, 'index'])->name('news');
 Route::get('/vokasi-store', [FrontendVokasiStoreController::class, 'index'])->name('vokasi-store');
