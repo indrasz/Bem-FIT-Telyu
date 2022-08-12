@@ -18,6 +18,7 @@ class Advokasi extends Model
         'category',
         'message',
         'status',
+        'slug'
     ];
 
 }

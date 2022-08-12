@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('price');
             $table->longText('description');
             $table->string('url');
-            $table->string('slug')->unique();
+            $table->string('slug');
 
             $table->softDeletes();
             $table->timestamps();

@@ -16,5 +16,6 @@ class BreakingNew extends Model
         'name',
         'description',
         'thumbnail',
+        'slug'
     ];
 }

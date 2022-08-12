@@ -16,5 +16,6 @@ class Creation extends Model
         'name',
         'description',
         'thumbnail',
+        'slug'
     ];
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Creation;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -40,6 +41,7 @@ class CreationController extends Controller
     public function store(CreationRequest $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/creation', 'public');
         Creation::create($data);
         
@@ -79,7 +81,7 @@ class CreationController extends Controller
     public function update(CreationRequest $request, Creation $creation)
     {
         $data = $request->all();
-
+        $data['slug'] = Str::slug($request->name);
         $get_photo = Creation::findOrFail($creation->id);
 
         if(isset($data['thumbnail'])){

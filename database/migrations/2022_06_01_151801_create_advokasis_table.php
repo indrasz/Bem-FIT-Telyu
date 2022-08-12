@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('category');
             $table->longText('message');
             $table->string('status')->default('PENDING');
+            $table->string('slug');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\BreakingNew;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -40,6 +41,7 @@ class BreakingNewsController extends Controller
     public function store(BreakingNewsRequest $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/news', 'public');
         BreakingNew::create($data);
 
@@ -79,6 +81,7 @@ class BreakingNewsController extends Controller
     public function update(BreakingNewsRequest $request, BreakingNew $breakingNews)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
 
         $get_photo = BreakingNew::findOrFail($breakingNews->id);
 
