@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Creation;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CreationController extends Controller
 {
@@ -11,18 +12,10 @@ class CreationController extends Controller
     {
         return view('pages.frontend.creation');
     }
-    
-    // public function detail(Request $request, $slug)
-    // {
-    //     $categories = Category::all();
-    //     $category = Category::where('slug', $slug)->firstOrFail();
-    //     $products = Product::where('categories_id', $category->id)->paginate($request->input('limit', 12));
 
-    //     return view('pages.category',[
-    //         'categories' => $categories,
-    //         'category' => $category,
-    //         'products' => $products
-    //     ]);
-    // }
-
+    public function detail(Request $request, $slug)
+    {
+        $creation = Creation::where('slug', $slug)->firstOrFail();
+        return view('pages.frontend.creation-detail', compact('creation'));
+    }
 }

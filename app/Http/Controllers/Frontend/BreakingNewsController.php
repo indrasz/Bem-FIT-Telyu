@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\BreakingNew;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BreakingNewsController extends Controller
 {
@@ -11,4 +12,11 @@ class BreakingNewsController extends Controller
     {
         return view('pages.frontend.news');
     }
+
+    public function detail(Request $request, $slug)
+    {
+        $new = BreakingNew::where('slug', $slug)->firstOrFail();
+        return view('pages.frontend.news-detail', compact('new'));
+    }
+
 }

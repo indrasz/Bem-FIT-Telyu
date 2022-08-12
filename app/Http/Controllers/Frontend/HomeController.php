@@ -11,8 +11,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $creation = Creation::all();
+        $creations = Creation::all();
         $news = BreakingNew::all();
-        return view('pages.frontend.index', compact('creation', 'news'));
+        return view('pages.frontend.index', compact('creations', 'news'));
     }
+
 }

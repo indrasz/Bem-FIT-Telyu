@@ -233,7 +233,7 @@
             }
 
             .hot-news-card .text-preview {
-                max-height: 88px;
+                max-height: 80px;
             }
 
             .hot-news-card .title {
@@ -273,7 +273,7 @@
                 data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
                 <!-- Card Container 1 -->
-                @forelse ($news as $key => $item)
+                @forelse ($news as $new => $item)
                     <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                         <div class="">
                             @if (isset($item->thumbnail) != null)
@@ -294,7 +294,7 @@
                                     {!! $item->description ?? '' !!}</div>
                             </div>
                             <div class="d-flex justify-content-center mt-3 pb-3">
-                                <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
+                                <a href="{{ route('news-detail', $item->slug) }}" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
                                     more</a>
                             </div>
                         </div>
@@ -358,7 +358,7 @@
             }
 
             .hot-creation-news-card .text-preview {
-                max-height: 88px;
+                max-height: 80px;
             }
 
             .hot-creation-news-card .title {
@@ -399,13 +399,13 @@
                 data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
                 <!-- Card Container 1 -->
-                @forelse ($creation as $key => $item)
+                @forelse ($creations as $creation => $item)
                     <div class="box-border bg-white rounded-2xl hot-creation-news-card mb-4">
                         <div class="">
                             @if (isset($item->thumbnail) != null)
                                 <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
                                     class="d-none d-sm-block image-preview" />
-                                    
+
                                 <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
                                     class="d-sm-none image-mobile-preview" />
                             @else
@@ -421,7 +421,7 @@
                                     {!! $item->description ?? '' !!}</div>
                             </div>
                             <div class="d-flex justify-content-center mt-3 pb-3">
-                                <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
+                                <a href="{{ route('creation-detail', $item->slug) }}" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
                                     more</a>
                             </div>
                         </div>
