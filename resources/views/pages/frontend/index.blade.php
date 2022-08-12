@@ -274,46 +274,37 @@
 
                 <!-- Card Container 1 -->
 
-                <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
-                    <div class="">
-                        <img src="/frontend/images/image-preview.png" alt="preview"
-                            class="d-none d-sm-block image-preview" />
-                        <img src="/frontend/images/image-preview.png" alt="preview"
-                            class="d-sm-none image-mobile-preview" />
-
-                        <div class="px-2 mt-2">
-                            <div class="title p-md-2 mt-3">title</div>
-                            <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipiscing elit. Arcu vel cras ut varius a.</div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3 pb-3">
-                            <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
-                    <div class="">
+                @forelse ($news as $key => $item)
+                    <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
                         <div class="">
-                            <img src="/frontend/images/image-preview.png" alt="preview"
-                                class="d-none d-sm-block image-preview" />
-                            <img src="/frontend/images/image-preview.png" alt="preview"
-                                class="d-sm-none image-mobile-preview" />
-                        </div>
-                        <div class="px-2 mt-2">
-                            <div class="title p-md-2 mt-3">title</div>
-                            <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipiscing elit. Arcu vel cras ut varius a.</div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3 pb-3">
-                            <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see more</a>
+                            @if (isset($item->thumbnail) != null)
+                                <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
+                                    class="d-none d-sm-block image-preview" />
+                                <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
+                                    class="d-sm-none image-mobile-preview" />
+                            @else
+                                <img src="{{ url('https://via.placeholder.com/750x500') }}" alt="preview"
+                                    class="d-none d-sm-block image-preview" />
+                                <img src="{{ url('https://via.placeholder.com/750x500') }}" alt="preview"
+                                    class="d-sm-none image-mobile-preview" />
+                            @endif
+
+                            <div class="px-2 mt-2">
+                                <div class="title p-md-2 mt-3"> {{ $item->name ?? '' }}</div>
+                                <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
+                                    {!! $item->description ?? '' !!}</div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 pb-3">
+                                <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
+                                    more</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
+                @empty
+                    <div class="justify-content-center text-center">
+                        Belum ada Product yang diupload
+                    </div>
+                @endforelse
             </div>
         </div>
     </section>
@@ -406,28 +397,40 @@
             </div>
 
             <div class="carousel gap-4" style="background: #ffffff !important;"
-                data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
+                data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": false, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
                 <!-- Card Container 1 -->
+                @forelse ($creation as $key => $item)
+                    <div class="box-border bg-white rounded-2xl hot-news-card mb-4">
+                        <div class="">
+                            @if (isset($item->thumbnail) != null)
+                                <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
+                                    class="d-none d-sm-block image-preview" />
+                                <img src=" {{ url(Storage::url($item->thumbnail)) }}" alt="preview"
+                                    class="d-sm-none image-mobile-preview" />
+                            @else
+                                <img src="{{ url('https://via.placeholder.com/750x500') }}" alt="preview"
+                                    class="d-none d-sm-block image-preview" />
+                                <img src="{{ url('https://via.placeholder.com/750x500') }}" alt="preview"
+                                    class="d-sm-none image-mobile-preview" />
+                            @endif
 
-                <div class="box-border bg-white rounded-2xl hot-creation-news-card mb-4">
-                    <div class="">
-                        <img src="/frontend/images/image-preview.png" alt="preview"
-                            class="d-none d-sm-block image-preview" />
-                        <img src="/frontend/images/image-preview.png" alt="preview"
-                            class="d-sm-none image-mobile-preview" />
-
-                        <div class="px-2 mt-2">
-                            <div class="title p-md-2 mt-3">title</div>
-                            <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipiscing elit. Arcu vel cras ut varius a.</div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3 pb-3">
-                            <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see more</a>
+                            <div class="px-2 mt-2">
+                                <div class="title p-md-2 mt-3"> {{ $item->name ?? '' }}</div>
+                                <div class="text-preview p-md-2 text-truncate mt-2 mt-sm-0">Lorem ipsum dolor sit amet,
+                                    {!! $item->description ?? '' !!}</div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 pb-3">
+                                <a href="#" class="btn btn-see-more py-2 px-5 text-white text-capitalize">see
+                                    more</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @empty
+                    <div class="justify-content-center text-center">
+                        Belum ada Product yang diupload
+                    </div>
+                @endforelse
 
             </div>
         </div>
@@ -473,8 +476,8 @@
     <section class="h-100 w-100" style="box-sizing: border-box; background-color: #ffffff">
         <div class="insta-bem-fit container-xxl  position-relative pb-5" style="font-family: 'Poppins', sans-serif">
             <!-- <div class="title-section justify-content-start text-start px-4">
-                    Instagram Feed
-                </div> -->
+                        Instagram Feed
+                    </div> -->
 
             <div loading="lazy" data-mc-src="5782e99c-c420-40ee-9276-37b3f6be9822#instagram"></div>
 
