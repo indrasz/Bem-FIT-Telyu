@@ -54,8 +54,7 @@
                     KABINET <span class="purple-text">TITIK TERANG</span>
                  </div>
                 <div class="title-text mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui. Massa massa purus
-                    feugiat condimentum at. Suscipit egestas integer pharetra
+                    BEM KEMA FIT tidak hanya sebuah organisasi, lebih dari itu ada tanggung jawab besar untuk meningkatkan taraf kesejahteraan mahasiswa. Untuk itu, Kami hadirkan Platform Advokasi Terpadu untuk menjadi wadah aktualisasi dari wajah #TitikTerang. Saluran aspirasi Anda sangat membantu kami untuk mewujudkannya.
                 </div>
 
                 <div class="d-flex mt-4 gap-3 d-none d-sm-flex">
@@ -124,9 +123,7 @@
                     Visi
                 </div>
                 <div class="title-text mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui. Massa
-                    massa purus
-                    feugiat condimentum at. Suscipit egestas integer pharetra
+                    Mewujudkan KEMA FIT yang profesional dan berkolaborasi aktif dalam pengamalan Tri Dharma perguruan tinggi diikui pembenahan arah vokasi guna mewujidkan FIT yang lebih baik.
                 </div>
 
                 <div class="d-flex mt-4 gap-3 justify-content-center justify-content-md-start">
@@ -175,50 +172,35 @@
                 <div class="sub-header-text text-center text-sm-start mt-4" style="color: #6A3093;">
                     Misi 01
                     <div class="title-text mt-2" style="color: #7882A4;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Membangun ruang internal BEM FIT yang harmonis dan sinergis diiringi semangat profesionalitas dan produktif.
                     </div>
                 </div>
 
                 <div class="sub-header-text text-center text-sm-start mt-4" style="color: #C8238B;">
                     Misi 02
                     <div class="title-text mt-2" style="color: #7882A4;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        menciptakan lingkungan harmonis dan kolaboratif antar mahasiswa, civitas akademik, dan seluruh KEMA FIT Telkom University.
                     </div>
                 </div>
 
                 <div class="sub-header-text text-center text-sm-start mt-4" style="color: #871A2F;">
                     Misi 03
                     <div class="title-text mt-2" style="color: #7882A4;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Meningkatkan kualitas pelayanan dan advokasi untuk mencapai kesejahteraan mahasiswa FI telkom university.
                     </div>
                 </div>
 
                 <div class="sub-header-text text-center text-sm-start mt-4" style="color: #61CECB;">
                     Misi 04
                     <div class="title-text mt-2" style="color: #7882A4;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Pemberdayaan dan perngembangan potensi minat bakat untuk skala nasional secara progresif dan apresiatif untuk seluruh mahasiswa FIT.
                     </div>
                 </div>
 
                 <div class="sub-header-text text-center text-sm-start mt-4" style="color: #A353EA;">
                     Misi 05
                     <div class="title-text mt-2" style="color: #7882A4;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa
-                        massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Mewujudkan gerapak bermoral Intelektual yang berdampak dalam mengawal isu-isu strategis.
                     </div>
                 </div>
 
