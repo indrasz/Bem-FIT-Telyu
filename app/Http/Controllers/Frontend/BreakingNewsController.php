@@ -8,15 +8,18 @@ use App\Http\Controllers\Controller;
 
 class BreakingNewsController extends Controller
 {
+
     public function index()
     {
-        return view('pages.frontend.news');
+        $news = BreakingNew::all();
+        return view('pages.frontend.news', compact('news'));
     }
 
     public function detail(Request $request, $slug)
     {
+        $news = BreakingNew::take(3)->get();
         $new = BreakingNew::where('slug', $slug)->firstOrFail();
-        return view('pages.frontend.news-detail', compact('new'));
+        return view('pages.frontend.news-detail', compact('new', 'news'));
     }
 
 }

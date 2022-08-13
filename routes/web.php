@@ -39,6 +39,7 @@ Route::get('/medpart', [MedpartController::class, 'index'])->name('medpart');
 Route::get('/news', [FrontendBreakingNewsController::class, 'index'])->name('news');
 Route::get('/news/{id}', [FrontendBreakingNewsController::class, 'detail'])->name('news-detail');
 Route::get('/vokasi-store', [FrontendVokasiStoreController::class, 'index'])->name('vokasi-store');
+Route::get('/vokasi-store/{id}', [FrontendVokasiStoreController::class, 'detail'])->name('vokasi-store-detail');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {

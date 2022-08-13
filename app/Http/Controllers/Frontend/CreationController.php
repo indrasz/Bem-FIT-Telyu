@@ -10,12 +10,14 @@ class CreationController extends Controller
 {
     public function index()
     {
-        return view('pages.frontend.creation');
+        $creations = Creation::all();
+        return view('pages.frontend.creation', compact('creations'));
     }
 
     public function detail(Request $request, $slug)
     {
+        $creations = Creation::take(3)->get();
         $creation = Creation::where('slug', $slug)->firstOrFail();
-        return view('pages.frontend.creation-detail', compact('creation'));
+        return view('pages.frontend.creation-detail', compact('creation', 'creations'));
     }
 }

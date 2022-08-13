@@ -38,16 +38,16 @@
                                             {{ $item->name ?? '' }}
                                         </h5>
                                         </a>
-                                        <span class="d-inline-block text-truncate" style="max-width: 250px; max-height: 45px;">
+                                        <span class="d-inline-block text-wrap text-truncate" style="max-width: 250px; max-height: 80px;">
                                             {!! $item->description ?? '' !!}
                                         </span>
                                         <div class="d-flex d-sm-block text-start text-xl-center align-items-center">
-                                            <a href="{{ route('dashboard.breaking-news.edit', $item->id) }}" class="btn btn-outline-primary btn-sm mb-0 me-2 me-sm-0">Edit Product</a>
+                                            <a href="{{ route('dashboard.breaking-news.edit', $item->id) }}" class="btn btn-outline-primary btn-sm mb-0 me-2 me-sm-0">Sunting Berita</a>
 
                                             <form action="{{ route('dashboard.breaking-news.destroy', $item->id) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-outline-danger btn-sm mb-0 mt-0 mt-xl-3 show_confirm">Delete Product</button>
+                                                <button type="submit" class="btn btn-outline-danger btn-sm mb-0 mt-0 mt-xl-3 show_confirm">Hapus Berita</button>
                                             </form>
                                         </div>
 
@@ -68,7 +68,7 @@
                             <div class="card-body d-flex flex-column justify-content-center text-center">
                                 <a href="{{ route('dashboard.breaking-news.create') }}">
                                     <i class="fa fa-plus text-secondary mb-3"></i>
-                                    <h5 class=" text-secondary"> New Product </h5>
+                                    <h5 class=" text-secondary"> Tambah Berita Baru </h5>
                                 </a>
                             </div>
                         </div>

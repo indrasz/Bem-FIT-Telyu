@@ -39,16 +39,16 @@
                                             {{ $item->name ?? '' }}
                                         </h5>
                                         </a>
-                                        <span class="d-inline-block text-truncate" style="max-width: 250px;">
+                                        <span class="d-inline-block text-wrap text-truncate" style="max-width: 250px;max-height:80px;">
                                             {!! $item->description ?? '' !!}
                                         </span>
-                                        <div class="d-flex d-sm-block text-start text-xl-center align-items-center">
-                                            <a href="{{ route('dashboard.vokasi-store.edit', $item->id) }}" class="btn btn-outline-primary btn-sm mb-0 me-2 me-sm-0">Edit Product</a>
+                                        <div class="d-flex d-sm-block text-start text-xl-center align-items-center mt-3">
+                                            <a href="{{ route('dashboard.vokasi-store.edit', $item->id) }}" class="btn btn-outline-primary btn-sm mb-0 me-2 me-sm-0">Sunting Produk</a>
 
                                             <form action="{{ route('dashboard.vokasi-store.destroy', $item->id) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-outline-danger btn-sm mb-0 mt-0 mt-xl-3 show_confirm" >Delete Product</button>
+                                                <button type="submit" class="btn btn-outline-danger btn-sm mb-0 mt-0 mt-xl-3 show_confirm" >Hapus Produk</button>
                                             </form>
                                         </div>
 
