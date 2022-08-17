@@ -6,16 +6,7 @@
 
 <div class="row">
     <div class="card mb-4">
-        <div class="card-header">
-            <div class="row align-items-center">
-                <div class="col-8">
-                    <h6 class="mb-0">Add Department </h6>
-                </div>
-                {{-- <div class="col-4 text-end">
-                    <a href="#!" class="btn btn-sm bg-gradient-primary mb-0">Settings</a>
-                </div> --}}
-            </div>
-        </div>
+
         <div class="card-body">
             <h6 class="heading-small text-muted mb-4">Department Profile</h6>
             <form action="{{ route('dashboard.department.store') }}" method="post" enctype="multipart/form-data">
@@ -26,7 +17,7 @@
                         <div class="form-group">
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}')"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop2.png') }}')"></div>
                                     <label class="btn bg-gradient-success">
                                         Upload
                                         <input type="file" name="thumbnail" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
@@ -63,14 +54,13 @@
 
     <style>
         .imagePreview {
-            width: 100%;
+            width: 89%;
             height: 300px;
             background-position: center;
             background-color:#fff;
             background-size: cover;
-            background-repeat:no-repeat;
+            background-repeat:repeat;
             display: inline-block;
-            box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
         }
         .btn-primary{
             display:block;

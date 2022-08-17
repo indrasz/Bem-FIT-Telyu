@@ -55,8 +55,8 @@
                                 </div>
                             </div>
                         @empty
-                            <div class="d-flex justify-content-center text-center">
-                                Belum ada Product yang diupload
+                            <div class="col-12 d-flex justify-content-center text-center">
+                                Belum ada Berita yang diupload
                             </div>
                         @endforelse
 

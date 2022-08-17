@@ -31,7 +31,7 @@
                         <div class="form-group">
                              <div class="row">
                                 <div class="col-sm-4 imgUp">
-                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}')"></div>
+                                    <div class="imagePreview rounded-3" style="background-image: url('{{ asset('admin/assets/img/dragdrop2.png') }}')"></div>
                                     <label class="btn btn-success">
                                         Upload
                                         <input type="file" name="thumbnail[]" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
@@ -83,14 +83,13 @@
     <style>
         .imagePreview {
             width: 100%;
-            height: 250px;
+            height: 350px;
             background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}');
             background-position: center;
             background-color:#fff;
             background-size: cover;
             background-repeat:no-repeat;
             display: inline-block;
-            box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
         }
         .btn-primary{
             display:block;
