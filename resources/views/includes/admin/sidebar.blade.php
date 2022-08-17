@@ -57,7 +57,9 @@
             </div>
 
             <span class="nav-link-text ms-1">Advokasi</span>
-            {{-- <span class="nav-link-text badge bg-gradient-primary rounded-pill ms-auto">{{ count($advokasi) }}</span> --}}
+            @if ( count($pending) > 0)
+                <span class="nav-link-text badge bg-gradient-primary rounded-pill ms-auto">{{ count($pending) }}</span>
+            @endif
           </a>
         </li>
         <li class="nav-item">
@@ -115,7 +117,7 @@
               <span class="nav-link-text ms-1">Department</span>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link
               {{
                   (request()->is('dashboard/user')) ||
@@ -143,7 +145,7 @@
               </div>
               <span class="nav-link-text ms-1">Account User</span>
             </a>
-          </li>
+          </li> --}}
 
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Profile pages</h6>

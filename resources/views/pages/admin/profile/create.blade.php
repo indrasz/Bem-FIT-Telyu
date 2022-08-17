@@ -75,12 +75,12 @@
 @push('after-style')
 
     <style>
-        .imagePreview {
-            width: 550px;
-            height: 345px;
+       .imagePreview {
+            width: 400px;
+            height: 250px;
             background-position: center;
             background-color:#fff;
-            background-size: cover;
+            background-size: contain;
             background-repeat:no-repeat;
             display: inline-block;
         }

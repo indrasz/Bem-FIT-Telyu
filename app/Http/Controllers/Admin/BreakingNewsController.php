@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Advokasi;
 use App\Models\BreakingNew;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class BreakingNewsController extends Controller
     public function index()
     {
         $breakingNews = BreakingNew::all();
-        return view('pages.admin.news.index', compact('breakingNews'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.news.index', compact('breakingNews', 'pending'));
     }
 
     /**
@@ -29,7 +31,8 @@ class BreakingNewsController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.news.create');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.news.create', compact('pending'));
     }
 
     /**
@@ -68,7 +71,8 @@ class BreakingNewsController extends Controller
      */
     public function edit(BreakingNew $breakingNews)
     {
-        return view('pages.admin.news.edit', compact('breakingNews'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.news.edit', compact('breakingNews', 'pending'));
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Profile;
+use App\Models\Advokasi;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,7 +21,8 @@ class ProfileController extends Controller
     {
         $profile = Profile::orderBy('created_at', 'desc')->get();
         $departments = Department::all();
-        return view('pages.admin.profile.index', compact('profile', 'departments'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.profile.index', compact('profile', 'departments', 'pending'));
     }
 
     /**
@@ -31,7 +33,8 @@ class ProfileController extends Controller
     public function create()
     {
         $departments = Department::all();
-        return view('pages.admin.profile.create', compact('departments'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.profile.create', compact('departments', 'pending'));
     }
 
     /**
@@ -71,7 +74,8 @@ class ProfileController extends Controller
     public function edit(Profile $profile)
     {
         $departments = Department::all();
-        return view('pages.admin.profile.edit', compact('profile', 'departments'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.profile.edit', compact('profile', 'departments', 'pending'));
     }
 
     /**

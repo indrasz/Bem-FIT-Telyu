@@ -17,7 +17,8 @@ class AdvokasiController extends Controller
     public function index()
     {
         $advokasi = Advokasi::all();
-        return view('pages.admin.advokasi.index', compact('advokasi'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.advokasi.index', compact('advokasi','pending'));
     }
 
     /**
@@ -60,7 +61,8 @@ class AdvokasiController extends Controller
      */
     public function edit(Advokasi $advokasi)
     {
-        return view('pages.admin.advokasi.edit', compact('advokasi'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.advokasi.edit', compact('advokasi', 'pending'));
     }
 
     /**
@@ -90,6 +92,6 @@ class AdvokasiController extends Controller
         $advokasi = Advokasi::findorFail($id);
         $advokasi->delete();
         toast()->success('Delete has been success');
-        return redirect()->route('dashboard.department.index');
+        return redirect()->route('dashboard.advokasi.index');
     }
 }

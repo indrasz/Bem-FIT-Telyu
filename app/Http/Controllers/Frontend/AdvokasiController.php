@@ -12,7 +12,12 @@ class AdvokasiController extends Controller
 {
     public function index()
     {
-        return view('pages.frontend.advokasi');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        $accepted = Advokasi::where('status', 'DITERIMA')->get();
+        $approved = Advokasi::where('status', 'DISETUJUI')->get();
+        $rejected = Advokasi::where('status', 'DITOLAK')->get();
+
+        return view('pages.frontend.advokasi',compact('pending','accepted', 'approved', 'rejected'));
     }
 
     public function store(AdvokasiRequest $request)

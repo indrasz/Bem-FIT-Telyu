@@ -68,6 +68,14 @@
                 </tr>
                 @empty
 
+                <tr>
+                    <td colspan="12">
+                        <h5 class="d-flex justify-content-center text-center mt-4">
+                            Belum ada request yang diupload
+                        </h5>
+                    </td>
+                </tr>
+
                 @endforelse
 
 

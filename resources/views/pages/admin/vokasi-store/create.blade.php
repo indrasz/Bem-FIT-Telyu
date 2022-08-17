@@ -82,12 +82,12 @@
 
     <style>
         .imagePreview {
-            width: 100%;
-            height: 350px;
-            background-image: url('{{ asset('admin/assets/img/dragdrop.png') }}');
+            width: 400px;
+            height: 250px;
+            background-image: url('{{ asset('admin/assets/img/dragdrop2.png') }}');
             background-position: center;
             background-color:#fff;
-            background-size: cover;
+            background-size: contain;
             background-repeat:no-repeat;
             display: inline-block;
         }

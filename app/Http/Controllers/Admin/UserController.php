@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Advokasi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -14,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.user.index');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.user.index', compact('pending'));
     }
 
     /**

@@ -30,7 +30,7 @@
             <div class="d-sm-flex flex-row gap-5 text-center justify-content-center d-none d-sm-block">
                 <div class=" p-3">
                     <div class="college-total semibold-text fs-24 mb-3">
-                        845
+                        {{ count($accepted) }}
                     </div>
                     <img src="/frontend/images/ic-received.png" alt="college-logo" width="70" class="college-image ">
                     <div class="mt-3 text-uppercase semibold-text fs-16 ">
@@ -39,7 +39,7 @@
                 </div>
                 <div class=" p-3">
                     <div class="college-total semibold-text fs-24 mb-3">
-                        150
+                        {{ count($pending) }}
                     </div>
                     <img src="/frontend/images/ic-pending.png" alt="ormawa-logo" width="70" class="college-image">
                     <div class="mt-3 semibold-text fs-16 text-uppercase">
@@ -48,7 +48,7 @@
                 </div>
                 <div class=" p-3">
                     <div class="college-total semibold-text fs-24 mb-3 ">
-                        640
+                        {{ count($approved) }}
                     </div>
                     <img src="/frontend/images/ic-approved.png" alt="prodi-logo" width="70"
                         class="d-none d-sm-block college-image">
@@ -58,7 +58,7 @@
                 </div>
                 <div class=" p-3">
                     <div class="college-total semibold-text fs-24 mb-3 ">
-                        55
+                        {{ count($rejected) }}
                     </div>
                     <img src="/frontend/images/ic-rejected.png" alt="prodi-logo" width="70"
                         class="d-none d-sm-block college-image">

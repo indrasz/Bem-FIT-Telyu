@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Advokasi;
 use App\Models\Department;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class DepartmentController extends Controller
     public function index()
     {
         $department = Department::orderBy('created_at', 'desc')->get();
-        return view('pages.admin.department.index', compact('department'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.department.index', compact('department', 'pending'));
     }
 
     /**
@@ -29,7 +31,8 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.department.create');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.department.create', compact('pending'));
     }
 
     /**
@@ -41,7 +44,7 @@ class DepartmentController extends Controller
     public function store(DepartmentRequest $request)
     {
         $data = $request->all();
-        
+
         $data['slug'] = Str::slug($request->name);
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/department', 'public');
         Department::create($data);
@@ -69,7 +72,8 @@ class DepartmentController extends Controller
      */
     public function edit(Department $department)
     {
-        return view('pages.admin.department.edit', compact('department'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.department.edit', compact('department', 'pending'));
     }
 
     /**

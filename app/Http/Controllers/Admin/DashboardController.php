@@ -19,10 +19,8 @@ class DashboardController extends Controller
         return view ('pages.admin.index', compact('pending','accepted', 'approved', 'rejected'));
     }
 
-//     public function deleteProductImage($id)
-//     {
-//         $product_galleries = VokasiStoreGallery::findorFail($id);
-//         $product_galleries->delete();
-//         return redirect()->route('dashboard.vokasi-store.edit');
-//     }
+    public function countSidebarAdvokasi(){
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view ('includes.admin.sidebar', compact('pending'));
+    }
 }

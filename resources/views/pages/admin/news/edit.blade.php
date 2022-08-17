@@ -70,17 +70,16 @@
 @push('after-style')
 
     <style>
-        .imagePreview {
-            width: 100%;
-            height: 300px;
+       .imagePreview {
+            width: 400px;
+            height: 250px;
             background-position: center;
-            background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
             background-color:#fff;
-            background-size: cover;
+            background-size: contain;
             background-repeat:no-repeat;
             display: inline-block;
-            box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
         }
+        
         .btn-primary{
             display:block;
             border-radius:0px;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Advokasi;
 use App\Models\Creation;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class CreationController extends Controller
     public function index()
     {
         $creation = Creation::all();
-        return view('pages.admin.creation.index', compact('creation'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.creation.index', compact('creation', 'pending'));
     }
 
     /**
@@ -29,7 +31,8 @@ class CreationController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.creation.create');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.creation.create', compact('pending'));
     }
 
     /**
@@ -44,7 +47,7 @@ class CreationController extends Controller
         $data['slug'] = Str::slug($request->name);
         $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/creation', 'public');
         Creation::create($data);
-        
+
         toast()->success('Save has been success');
         return redirect()->route('dashboard.creation.index');
     }
@@ -68,7 +71,8 @@ class CreationController extends Controller
      */
     public function edit(Creation $creation)
     {
-        return view('pages.admin.creation.edit', compact('creation'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.creation.edit', compact('creation', 'pending'));
     }
 
     /**

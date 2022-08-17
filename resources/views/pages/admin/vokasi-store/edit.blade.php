@@ -133,15 +133,14 @@
 
     <style>
         .imagePreview {
-            width: 100%;
+            width: 400px;
             height: 250px;
             background-position: center;
-            background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+            background-image: url('{{ asset('admin/assets/img/dragdrop2.png') }}');
             background-color:#fff;
-            background-size: cover;
+            background-size: contain;
             background-repeat:no-repeat;
             display: inline-block;
-            box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
         }
         .imgUp{
             margin-bottom:15px;

@@ -77,9 +77,7 @@
                         KABINET <span class="purple-text">TITIK TERANG</span>
                     </div>
                     <div class="title-text mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc
-                        dui. Massa massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                        Situs Resmi Badan Eksekutif Mahasiswa Fakultas Ilmu Terapan, Universitas Telkom Kabinet Titik Terang, Masa Bhakti Tahun 2022.
                     </div>
 
                     <div class="d-flex mt-4 gap-3 d-none d-sm-flex">

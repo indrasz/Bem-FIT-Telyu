@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Advokasi;
 use App\Models\VokasiStore;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -20,8 +21,9 @@ class VokasiStoreController extends Controller
     public function index()
     {
         $vokasiStore = VokasiStore::orderBy('created_at', 'desc')->with('gallery')->get();
+        $pending = Advokasi::where('status', 'PENDING')->get();
 
-        return view('pages.admin.vokasi-store.index', compact('vokasiStore'));
+        return view('pages.admin.vokasi-store.index', compact('vokasiStore', 'pending'));
     }
 
     /**
@@ -31,7 +33,8 @@ class VokasiStoreController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.vokasi-store.create');
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.vokasi-store.create', compact('pending'));
     }
 
     /**
@@ -89,7 +92,8 @@ class VokasiStoreController extends Controller
         $thumbnail_product = VokasiStoreGallery::where('vokasi_stores_id', $vokasiStore['id'])->get();
 
         // dd($vokasiStore);
-        return view('pages.admin.vokasi-store.edit', compact('vokasiStore', 'thumbnail_product'));
+        $pending = Advokasi::where('status', 'PENDING')->get();
+        return view('pages.admin.vokasi-store.edit', compact('vokasiStore', 'thumbnail_product', 'pending'));
 
     }
 

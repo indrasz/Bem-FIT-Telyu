@@ -54,12 +54,12 @@
 
     <style>
         .imagePreview {
-            width: 89%;
-            height: 300px;
+            width: 400px;
+            height: 250px;
             background-position: center;
             background-color:#fff;
-            background-size: cover;
-            background-repeat:repeat;
+            background-size: contain;
+            background-repeat:no-repeat;
             display: inline-block;
         }
         .btn-primary{
