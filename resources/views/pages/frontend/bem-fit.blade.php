@@ -46,42 +46,10 @@
 
 
     </style>
-    <div class="header-kema-home container p-lg-4 position-relative" style="font-family: 'Poppins', sans-serif">
-        <div class="row justify-content-between p-5">
-            <div class="col-12 col-md-6">
-                <div class="header-text">
-                    <span class="purple-text">BEM</span> KEMA FIT<br>
-                    KABINET <span class="purple-text">TITIK TERANG</span>
-                 </div>
-                <div class="title-text mt-3">
-                    BEM KEMA FIT tidak hanya sebuah organisasi, lebih dari itu ada tanggung jawab besar untuk meningkatkan taraf kesejahteraan mahasiswa. Untuk itu, Kami hadirkan Platform Advokasi Terpadu untuk menjadi wadah aktualisasi dari wajah #TitikTerang. Saluran aspirasi Anda sangat membantu kami untuk mewujudkannya.
-                </div>
-
-                <div class="d-flex mt-4 gap-3 d-none d-sm-flex">
-                    <a class="btn btn-medpart rounded-pill px-4 py-3">
-                        Media Partner
-                    </a>
-                    <a class="btn btn-video-profile rounded-pill px-4 py-2 ">
-                        <img src="/frontend/images/btn-display.svg" alt="button-display">
-                        Video Profile
-                    </a>
-                </div>
-           </div>
-
-            <div class="col-12 col-md-6 text-center ">
-                <img src="/frontend/images/banner-bem.png" alt="banner-bem" class="image-banner-home">
-
-                <div class="d-flex justify-content-center mt-5 gap-2 d-sm-none d-md-none d-lg-none">
-                    <a class="btn btn-medpart rounded-pill py-2">
-                        Media Partner
-                    </a>
-                    <a class="btn btn-video-profile rounded-pill py-2">
-                        <img src="/frontend/images/btn-display.svg" alt="button-display">
-                        Video Profile
-                    </a>
-                </div>
-            </div>
-       </div>
+    <div class="header-kema-home container-xxl p-lg-4 position-relative" style="font-family: 'Poppins', sans-serif">
+        <a href="">
+            <img src="/frontend/images/banner-bem2.png" alt="banner" class="rounded-3 w-100">
+        </a>
     </div>
 </section>
 <!-- end header bem kema section -->
@@ -122,7 +90,7 @@
                 <div class="header-text text-uppercase">
                     Visi
                 </div>
-                <div class="title-text mt-4">
+                <div class="title-text grey-color mt-4">
                     Mewujudkan KEMA FIT yang profesional dan berkolaborasi aktif dalam pengamalan Tri Dharma perguruan tinggi diikui pembenahan arah vokasi guna mewujidkan FIT yang lebih baik.
                 </div>
 
@@ -277,14 +245,13 @@
                 <img src="/frontend/images/advokasi-banner.png" alt="advokasi-banner" class="image-banner-advokasi">
             </div>
 
-            <div class="col-12 col-md-6 mt-5">
+            <div class="col-12 col-md-6">
                 <div class="header-text text-uppercase">
                     Advokasi
                 </div>
-                <div class="title-text mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui. Massa
-                    massa purus
-                    feugiat condimentum at. Suscipit egestas integer pharetra
+                <div class="title-text grey-color">
+                    Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan <span class="purple-color">#TitikTerang</span>, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
+
                 </div>
 
                 <div class="d-flex mt-4 gap-3 justify-content-center justify-content-md-start">

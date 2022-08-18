@@ -36,17 +36,16 @@
             }
         </style>
 
-        <div class="header-kema-home container-xxl p-lg-4 position-relative" style="font-family: 'Poppins', sans-serif">
+        <div class="header-kema-home container-xxl p-lg-4 position-relative"
+            style="background-image: url('/frontend/images/bg-banner.png'); background-position: top left; background-size: 500px; background-repeat: no-repeat;">
             <div class="row justify-content-between p-5">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 d-grid align-content-center">
                     <div class="header-text">
-                        Berita Nyata<span class="purple-text"> Dari</span> <br />
-                        Sumber Terpercaya
+                        Vokasi Berkarya
                     </div>
-                    <div class="title-text mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                    <div class="title-text grey-color mt-3">
+                        Temukan beragam produk menarik dari store kami, dan dapatkan harga dan kualitas terbaik, mulai dari
+                        merchandise hingga fashion dengan sentuhan seni khas karya mahasiswa vokasi.
                     </div>
 
                     <div class="d-flex mt-4 gap-3 d-none d-sm-flex">
@@ -57,7 +56,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 text-center ">
-                    <img src="/frontend/images/news-banner.png" alt="banner-home" class="image-banner-home">
+                    <img src="/frontend/images/hero-creation.png" alt="banner-home" class="image-banner-home">
 
                     <div class="d-flex justify-content-center mt-5 gap-2 d-sm-none d-md-none d-lg-none">
                         <a class="btn btn-medpart rounded-pill py-2">
@@ -89,10 +88,10 @@
         </style>
         <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
             <div class="headline d-flex justify-content-center text-center mb-2 px-3">
-                Hot News
+                Karya Terbaru
             </div>
             <div class="sub-headline d-flex justify-content-center text-center mb-3 mb-md-4 px-3">
-                Berita yang sedang hangat diperbincangkan
+                Karya terbaru dari mahasiswa/i Fakultas Ilmu Terapan
             </div>
             <div class="row justify-content-center p-md-4 p-2">
                 <img src="/frontend/images/banner-hot-news.png" alt="Banner home">
@@ -150,7 +149,7 @@
                     </a>
 
                 @empty
-                    <div class="justify-content-center text-center">
+                    <div class="col-12 justify-content-center text-center">
                         Belum ada karya yang diupload
                     </div>
                 @endforelse

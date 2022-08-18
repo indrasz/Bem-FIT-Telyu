@@ -70,41 +70,9 @@
             }
         </style>
         <div class="header-kema-home container-xxl p-lg-4 position-relative" style="font-family: 'Poppins', sans-serif">
-            <div class="row justify-content-between p-5">
-                <div class="col-12 col-md-6">
-                    <div class="header-text">
-                        <span class="purple-text">BEM</span> KEMA FIT<br>
-                        KABINET <span class="purple-text">TITIK TERANG</span>
-                    </div>
-                    <div class="title-text mt-3">
-                        Situs Resmi Badan Eksekutif Mahasiswa Fakultas Ilmu Terapan, Universitas Telkom Kabinet Titik Terang, Masa Bhakti Tahun 2022.
-                    </div>
-
-                    <div class="d-flex mt-4 gap-3 d-none d-sm-flex">
-                        <a class="btn btn-medpart rounded-pill px-4 py-3">
-                            Media Partner
-                        </a>
-                        <a class="btn btn-video-profile rounded-pill px-4 py-2 ">
-                            <img src="{{ asset('frontend/images/btn-display.svg') }}" alt="button-display">
-                            Video Profile
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 text-center ">
-                    <img src="{{ asset('frontend/images/banner1.png') }}" alt="banner-home" class="image-banner-home">
-
-                    <div class="d-flex justify-content-center mt-5 gap-2 d-sm-none d-md-none d-lg-none">
-                        <a class="btn btn-medpart rounded-pill py-2">
-                            Media Partner
-                        </a>
-                        <a class="btn btn-video-profile rounded-pill py-2">
-                            <img src="{{ asset('frontend/images/btn-display.svg') }}" alt="button-display">
-                            Video Profile
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <a href="#">
+                <img src="/frontend/images/banner-header.png" alt="banner" class="rounded-3 w-100">
+            </a>
         </div>
     </section>
     <!-- end header bem kema section -->
@@ -200,9 +168,9 @@
             }
         </style>
         <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
-            <div class="row justify-content-between p-md-4 p-2">
-                <img src="/frontend/images/benner_karya.png" alt="Banner home">
-            </div>
+            <a href="#">
+                <img src="/frontend/images/banner-news.png" alt="banner" class="rounded-3 w-100">
+            </a>
         </div>
     </section>
     <!-- end header karya section -->
@@ -298,8 +266,8 @@
                         </div>
                     </div>
                 @empty
-                    <div class="justify-content-center text-center">
-                        Belum ada Product yang diupload
+                    <div class="col-12 justify-content-center text-center">
+                        Belum ada berita yang diupload
                     </div>
                 @endforelse
             </div>
@@ -315,8 +283,10 @@
             }
         </style>
         <div class="header-karya container-xxl pb-5 position-relative" style="font-family: 'Poppins', sans-serif">
-            <div class="row justify-content-between p-md-4 p-2">
-                <img src="/frontend/images/benner_karya2.png" alt="Banner home">
+            <div class="justify-content-center p-2">
+                <a href="#">
+                    <img src="/frontend/images/banner-creation.png" alt="Banner" class="w-100 rounded-3">
+                </a>
             </div>
 
             <div class="row justify-content-between">
@@ -389,7 +359,7 @@
         <div class="hot-creation-news container-xxl px-2 pb-5 mb-4 position-relative"
             style="font-family: 'Poppins', sans-serif">
             <div class="fs-24 medium-text mb-5 px-3">
-                News
+                Creations
                 <span class="float-end me-3">See All</span>
             </div>
 
@@ -425,8 +395,8 @@
                         </div>
                     </div>
                 @empty
-                    <div class="justify-content-center text-center">
-                        Belum ada Product yang diupload
+                    <div class="col-12 justify-content-center text-center">
+                        Belum ada karya yang diupload
                     </div>
                 @endforelse
 
@@ -518,8 +488,8 @@
                     <div class="header-text text-uppercase">
                         Advokasi
                     </div>
-                    <div class="title-text mt-4">
-                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan #TitikTerang, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
+                    <div class="title-text grey-color mt-4">
+                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan <span class="purple-color">#TitikTerang</span>, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
 
                     </div>
 

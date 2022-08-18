@@ -14,7 +14,7 @@
         </style>
         <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
             <div class="row justify-content-between p-md-4 p-2">
-                <img src="/frontend/images/vokasi-store-banner.png" alt="Banner Vokasi Store">
+                <img src="/frontend/images/banner-vokasi-store.png" alt="Banner Vokasi Store">
             </div>
         </div>
     </section>

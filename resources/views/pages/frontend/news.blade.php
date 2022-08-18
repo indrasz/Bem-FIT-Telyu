@@ -36,17 +36,17 @@
             }
         </style>
 
-        <div class="header-kema-home container-xxl p-lg-4 position-relative" style="font-family: 'Poppins', sans-serif">
+        <div class="header-kema-home container-xxl p-lg-4 position-relative"
+            style="background-image: url('/frontend/images/bg-banner.png'); background-position: top left; background-size: 500px; background-repeat: no-repeat;">
             <div class="row justify-content-between p-5">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 d-grid align-content-center">
                     <div class="header-text">
                         Berita Nyata<span class="purple-text"> Dari</span> <br />
                         Sumber Terpercaya
                     </div>
-                    <div class="title-text mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit in facilisis morbi nunc nunc dui.
-                        Massa massa purus
-                        feugiat condimentum at. Suscipit egestas integer pharetra
+                    <div class="title-text grey-color mt-3">
+                        Dapatkan berita ter-update setiap minggunya seputar budaya, advokasi, seni, teknologi hingga politik
+                        secara mudah.
                     </div>
 
                     <div class="d-flex mt-4 gap-3 d-none d-sm-flex">
@@ -149,11 +149,11 @@
                     </a>
 
                 @empty
-                    <div class="justify-content-center text-center">
+                    <div class="col-12 justify-content-center text-center">
                         Belum ada berita yang diupload
                     </div>
                 @endforelse
-                
+
             </div>
         </div>
     </section>

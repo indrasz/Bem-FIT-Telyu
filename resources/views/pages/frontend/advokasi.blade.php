@@ -12,10 +12,10 @@
 
             }
         </style>
-        <div class="header-karya container-fluid  position-relative" style="font-family: 'Poppins', sans-serif">
-            <div class="row justify-content-between p-md-4 ">
-                <img src="/frontend/images/header-banner-advokasi.png" alt="Banner home">
-            </div>
+        <div class="header-karya container-xxl  position-relative" style="font-family: 'Poppins', sans-serif">
+            <a href="">
+                <img src="/frontend/images/banner-advokasi.png" alt="Banner home" class="rounded-3 w-100">
+            </a>
         </div>
     </section>
     <!-- end header karya section -->
@@ -165,8 +165,8 @@
                     <div class="header-text text-uppercase">
                         Advokasi
                     </div>
-                    <div class="title-text mt-4">
-                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan #TitikTerang, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
+                    <div class="title-text grey-color mt-4">
+                        Advokasi hadir untuk aktualisasi peran kami untuk mewujudkan kesejahteraan. Kami sangat membutuhkan saran, pendapat, dan kritik Anda sebagai alasan kami untuk terus tumbuh lebih tinggi, terus berkembang lebih baik, karena kami percaya KEMA FIT bukan hanya memerlukan <span class="purple-color">#TitikTerang</span>, lebih dari itu memerlukan rasa dibersamai, rasa dimiliki, rasa diperjuangkan, dengan Bantuan Anda mari bersama - sama merawat FIT tumbuh, menjadi sebuah pohon yang tidak hanya hidup, lebih dari itu, ia mampu menghasilkan buah, membagi kebahagiaan, membagikan senyuman kepada semua orang.
 
                     </div>
 
