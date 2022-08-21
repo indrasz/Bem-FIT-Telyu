@@ -16,7 +16,7 @@
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content modal-content bg-white border-0 pb-4">
                         <div class="modal-header" style="padding: 2rem; padding-bottom: 0">
-                            <a class="modal-title" id="targetModalLabel">
+                            <a class="modal-title" id="targetModalLabel" href="{{ route('home') }}">
                                 <img style="margin-top: 0.5rem" src="{{ asset('frontend/images/main-logo.png') }}"
                                     alt="main-logo" width="90" />
                             </a>
@@ -28,7 +28,7 @@
                         <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
                             <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">BEM KEMA FIT</a>
+                                    <a class="nav-link {{ (request()->is('bem-fit')) ? 'active' : '' }}" href="{{ route('bem-fit') }}">BEM KEMA FIT</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#"
@@ -85,7 +85,7 @@
                                     <a class="nav-link" href="#">CONTACT</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">VOKASI STORE</a>
+                                    <a class="nav-link {{ (request()->is('vokasi-store')) ? 'active' : '' }}" href="{{ route('vokasi-store') }}">VOKASI STORE</a>
                                 </li>
                             </ul>
                         </div>
