@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CreationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
+use App\Http\Controllers\Admin\OrmawaController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VokasiStoreController;
@@ -53,6 +54,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
             Route::resource('breaking-news', BreakingNewsController::class);
             Route::resource('profile', ProfileController::class);
             Route::resource('user', UserController::class);
+            Route::resource('ormawa', OrmawaController::class);
         });
     });
 });
