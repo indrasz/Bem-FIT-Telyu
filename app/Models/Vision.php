@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Vision extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    public $table = 'vision';
+    public $table = 'visions';
 
     protected $dates = [
         'updated_at',

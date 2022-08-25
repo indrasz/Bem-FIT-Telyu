@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Mision extends Model
+class Missions extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    public $table = 'mission';
+    public $table = 'missions';
 
     protected $dates = [
         'updated_at',

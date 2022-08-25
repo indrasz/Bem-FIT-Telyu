@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', ' Home')
+@section('title', ' Breaking News Detail')
 
 @section('content')
 
