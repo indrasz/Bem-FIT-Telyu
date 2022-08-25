@@ -17,6 +17,7 @@ use App\Http\Controllers\Frontend\BreakingNewsController as FrontendBreakingNews
 use App\Http\Controllers\Frontend\CreationController as FrontendCreationController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\MedpartController;
+use App\Http\Controllers\Frontend\OrmawaController as FrontendOrmawaController;
 use App\Http\Controllers\Frontend\VokasiStoreController as FrontendVokasiStoreController;
 
 /*
@@ -41,6 +42,7 @@ Route::get('/news', [FrontendBreakingNewsController::class, 'index'])->name('new
 Route::get('/news/{id}', [FrontendBreakingNewsController::class, 'detail'])->name('news-detail');
 Route::get('/vokasi-store', [FrontendVokasiStoreController::class, 'index'])->name('vokasi-store');
 Route::get('/vokasi-store/{id}', [FrontendVokasiStoreController::class, 'detail'])->name('vokasi-store-detail');
+Route::get('/ormawa/{id}', [FrontendOrmawaController::class, 'index'])->name('ormawa-detail');
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {

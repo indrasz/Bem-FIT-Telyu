@@ -115,9 +115,51 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </a>
+                        <style>
+                            .logo-ormawa{
+                                object-fit: cover;
+                                object-position: center;
+                                width:35px;
+                                height: 35px;
+                            }
+                        </style>
                         <ul class="dropdown-menu" style="cursor: pointer">
+                            @forelse ($ormawa as $key => $item)
+                                <li>
+                                    <a href="{{ route('ormawa-detail', $item->slug) }}"
+                                        class="dropdown-hover d-flex align-items-center justify-content-center text-start text-decoration-none">
+                                        @if (isset($item->thumbnail) != null)
 
-                            <li>
+                                            <img class="logo-ormawa rounded-pill"
+                                                src=" {{ url(Storage::url($item->thumbnail)) }}"
+                                                alt="logo" />
+                                        @else
+                                            <img class=""
+                                                src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header5/Header-5-6.png"
+                                                alt="logo" />
+                                        @endif
+
+                                        <div class="flex-grow-1 text-truncate ps-4">
+                                            <h2 class="icon-item-title">{{ $item->name }}</h2>
+                                            <p class="icon-item-caption text-wrap" style="margin-bottom: 0;">
+                                                Ask us about a complaint
+                                            </p>
+                                        </div>
+                                        <svg class="dropdown-icon-arrow d-none" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5237 9.41999L10.7887 13.17C10.6687 13.29 10.5187 13.35 10.3687 13.35C10.2187 13.35 10.0687 13.29 9.94871 13.17C9.70871 12.93 9.70871 12.555 9.94871 12.315L12.6637 9.58499H3.90371C3.57371 9.58499 3.30371 9.31499 3.30371 8.98499C3.30371 8.65499 3.57371 8.38499 3.90371 8.38499H12.6637L9.94871 5.655C9.70871 5.415 9.70871 5.04 9.94871 4.8C10.1887 4.56 10.5637 4.56 10.8037 4.8L14.5387 8.54999C14.7637 8.80499 14.7637 9.19499 14.5237 9.41999Z"
+                                                fill="#7F31FF" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            @empty
+                                <div class="col-12 justify-content-center text-center">
+                                    Belum ada berita yang diupload
+                                </div>
+                            @endforelse
+
+                            {{-- <li>
                                 <a href="#"
                                     class="dropdown-hover d-flex align-items-center justify-content-center text-start text-decoration-none">
                                     <img class=""
@@ -156,7 +198,7 @@
                                             fill="#7F31FF" />
                                     </svg>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
 

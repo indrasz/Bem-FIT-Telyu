@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\AdvokasiRequest;
+use App\Models\Ormawa;
 
 class AdvokasiController extends Controller
 {
@@ -16,8 +17,9 @@ class AdvokasiController extends Controller
         $accepted = Advokasi::where('status', 'DITERIMA')->get();
         $approved = Advokasi::where('status', 'DISETUJUI')->get();
         $rejected = Advokasi::where('status', 'DITOLAK')->get();
+        $ormawa = Ormawa::all();
 
-        return view('pages.frontend.advokasi',compact('pending','accepted', 'approved', 'rejected'));
+        return view('pages.frontend.advokasi',compact('pending','accepted', 'approved', 'rejected','ormawa'));
     }
 
     public function store(AdvokasiRequest $request)
