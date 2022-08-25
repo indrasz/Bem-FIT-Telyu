@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Vision;
-use App\Models\Mission;
+use App\Models\Missions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -24,7 +24,7 @@ class Ormawa extends Model
 
     public function mission()
     {
-        return $this->hasMany(Mission::class, 'ormawas_id');
+        return $this->hasMany(Missions::class, 'ormawas_id');
     }
 
     public function vision()

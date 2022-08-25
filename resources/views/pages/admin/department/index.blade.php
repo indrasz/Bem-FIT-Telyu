@@ -40,9 +40,9 @@
                       </div>
                     </td>
                     <td class="align-middle text-center ">
-                      <span class="text-secondary text-xs font-weight-bold">2{{ $item->created_at }}</span>
+                      <span class="text-secondary text-xs font-weight-bold">{{ $item->created_at }}</span>
                     </td>
-                    <td class="align-middle  ">
+                    <td class="align-middle ">
                      <div class="d-flex justify-content-center gap-2">
                         <a href="{{ route('dashboard.department.edit', $item->id) }}" class=" btn text-secondary font-weight-bold text-xs mt-3" data-toggle="tooltip" data-original-title="Edit user">
                             Edit
@@ -105,7 +105,7 @@
                     </div>
                   </div>
                 @empty
-                
+
 
                 @endforelse
 

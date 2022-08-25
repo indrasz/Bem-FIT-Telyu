@@ -18,50 +18,74 @@
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Nama Ormawa
                                     </th>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                        Function</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Status</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Employed</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Link Url
+                                    </th>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex px-2 py-1">
-                                            <div>
-                                                <img src="{{ asset('admin/assets/img/team-2.jpg') }}"
-                                                    class="avatar avatar-sm me-3" alt="user1">
+                                @forelse ($ormawa as $key => $item)
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    @if ($item->thumbnail != null)
+                                                        <img class="avatar avatar-sm me-3"
+                                                            src="{{ url(Storage::url($item->thumbnail)) }}"
+                                                            alt="logo department" loading="lazy"
+                                                            style="-o-object-fit: cover; object-fit: cover;">
+                                                    @else
+                                                        <img class="avatar avatar-sm me-3"
+                                                            src="{{ url('https://via.placeholder.com/750x500') }}"
+                                                            alt="placeholder" />
+                                                    @endif
+                                                    {{-- <img src="{{ asset('admin/assets/img/team-2.jpg') }}" class="avatar avatar-sm me-3" alt="user1"> --}}
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ $item->name }}</h6>
+                                                </div>
                                             </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">John Michael</h6>
-                                                <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                                        </td>
+                                        <td class="align-middle text-start ">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold ps-3">{{ $item->url_instagram }}</span>
+                                        </td>
+                                        <td class="align-middle ">
+                                            <div class="d-flex justify-content-center gap-2">
+                                                <a href="{{ route('dashboard.ormawa.edit', $item->id) }}"
+                                                    class=" btn text-secondary font-weight-bold text-xs mt-3"
+                                                    data-toggle="tooltip" data-original-title="Edit user">
+                                                    Edit
+                                                </a>
+                                                <form action="{{ route('dashboard.ormawa.destroy', $item->id) }}"
+                                                    method="POST">
+                                                    @method('DELETE')
+                                                    @csrf
+
+                                                    <button type="submit"
+                                                        class=" btn text-danger font-weight-bold text-xs mt-3 show_confirm">
+                                                        delete
+                                                    </button>
+                                                </form>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs font-weight-bold mb-0">Manager</p>
-                                        <p class="text-xs text-secondary mb-0">Organization</p>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-success">Online</span>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                                    </td>
-                                    <td class="align-middle">
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            Edit
-                                        </a>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
+
+                                @empty
+
+                                    <tr>
+                                        <td colspan="12">
+                                            <h5 class="d-flex justify-content-center text-center mt-4">
+                                                Belum ada request yang diupload
+                                            </h5>
+                                        </td>
+                                    </tr>
+                                @endforelse
+
                             </tbody>
                         </table>
                     </div>
