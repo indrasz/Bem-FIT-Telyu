@@ -120,7 +120,7 @@
                         class="image-banner-visi mb-4 mb-sm-0">
                 </div>
 
-                <div class="col-12 col-md-6 d-grid align-content-center justify-content-start">
+                <div class="col-12 col-md-6 d-grid align-content-center justify-content-sm-start justify-content-center">
                     <div class="header-text text-uppercase mb-3">
                         Visi
                     </div>
