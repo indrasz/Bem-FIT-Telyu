@@ -46,40 +46,20 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="form-control-label" for="vision">Visi</label>
-                                @forelse ($vision as $vision_item)
-                                    <input type="text" name="{{ 'visions[' . $vision_item->id . ']' }}" id="vision"
-                                        class="form-control" value="{{ $vision_item->vision ?? '' }}"
-                                        placeholder="Visi Ormawa">
-                                @empty
-                                    {{-- empty --}}
-                                @endforelse
-                                <div id="newVision"></div>
-                                <i class="fa fa-plus visionAdd btn bg-gradient-primary rounded-2 mt-2">
-                                    tambah visi
-                                </i>
+                                <label class="form-control-label" for="description">Visi Ormawa</label>
+                                <textarea id="editor" name="vision" class="form-control" placeholder="A few words about this Ormawa ...">{{ $ormawa->vision ?? '' }}</textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="form-control-label" for="mission">Misi</label>
-                                @forelse ($mission as $mission_item)
-                                    <input type="text" name="{{ 'missions[' . $mission_item->id . ']' }}" id="mission"
-                                        class="form-control" value="{{ $mission_item->mission ?? '' }}"
-                                        placeholder="Misi Ormawa">
-                                @empty
-                                    {{-- empty --}}
-                                @endforelse
-                                <div id="newMission"></div>
-                                <i class="fa fa-plus missionAdd btn bg-gradient-primary rounded-2 mt-2">
-                                    tambah misi
-                                </i>
+                                <label class="form-control-label" for="description">Misi Ormawa</label>
+                                <textarea id="editor1" name="mission" class="form-control" placeholder="A few words about this Ormawa ...">{{ $ormawa->mission ?? '' }}</textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-control-label" for="description">Description</label>
-                                <textarea id="editor" name="description" class="form-control" placeholder="A few words about this Ormawa ...">{{ $ormawa->description ?? '' }}</textarea>
+                                <textarea id="editor2" name="description" class="form-control" placeholder="A few words about this Ormawa ...">{{ $ormawa->description ?? '' }}</textarea>
                             </div>
                         </div>
 
@@ -140,21 +120,10 @@
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('editor');
+        CKEDITOR.replace('editor1');
+        CKEDITOR.replace('editor2');
     </script>
     <script>
-        $(".visionAdd").click(function() {
-            $(this).closest(".row").find('.visionAdd').before(
-                '<div class="d-flex gap-2"><input type="text" name="vision[]" id="vision" class="form-control mt-1 mb-1" placeholder="Visi Ormawa"><i class="fa fa-times del bg-danger mt-2 mx-2"></i></div>'
-            );
-        });
-        $(".missionAdd").click(function() {
-            $(this).closest(".row").find('.missionAdd').before(
-                '<div class="d-flex gap-2"><input type="text" name="mission[]" id="mission" class="form-control mt-1 mb-1" placeholder="Misi Ormawa"><i class="fa fa-times del bg-danger mt-2 mx-2"></i></div>'
-            );
-        });
-        $(document).on("click", "i.del", function() {
-            $(this).parent().remove();
-        });
         $(function() {
             $(document).on("change", ".uploadFile", function() {
                 var uploadFile = $(this);

@@ -26,6 +26,8 @@ class OrmawaRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'description' => 'required',
+            'vision' => 'required',
+            'mission' => 'required',
             'thumbnail' => [
                 'nullable', 'file', 'max:1024',
             ],

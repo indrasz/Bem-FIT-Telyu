@@ -22,7 +22,7 @@ class OrmawaController extends Controller
     public function index()
     {
         $pending = Advokasi::where('status', 'PENDING')->get();
-        $ormawa = Ormawa::orderBy('created_at', 'desc')->with('vision', 'mission')->get();
+        $ormawa = Ormawa::orderBy('created_at', 'desc')->get();
         return view('pages.admin.ormawa.index', compact('pending', 'ormawa'));
     }
 
@@ -51,22 +51,6 @@ class OrmawaController extends Controller
         // dd($data);
         $ormawa = Ormawa::create($data);
 
-        foreach ($data['vision'] as $key => $value) {
-            $vision = new Vision;
-            $vision->ormawas_id = $ormawa->id;
-            $vision->vision = $value;
-            $vision->save();
-        }
-
-        foreach ($data['mission'] as $key => $value) {
-            $mission = new Missions;
-            $mission->ormawas_id = $ormawa->id;
-            $mission->mission = $value;
-            $mission->save();
-        }
-
-
-
         toast()->success('Save has been success');
         return redirect()->route('dashboard.ormawa.index');
     }
@@ -90,10 +74,8 @@ class OrmawaController extends Controller
      */
     public function edit(Ormawa $ormawa)
     {
-        $vision = Vision::where('ormawas_id', $ormawa['id'])->get();
-        $mission = Missions::where('ormawas_id', $ormawa['id'])->get();
         $pending = Advokasi::where('status', 'PENDING')->get();
-        return view('pages.admin.ormawa.edit', compact('ormawa', 'vision', 'mission', 'pending'));
+        return view('pages.admin.ormawa.edit', compact('ormawa', 'pending'));
     }
 
     /**
@@ -122,42 +104,6 @@ class OrmawaController extends Controller
             $data['thumbnail'] = $request->file('thumbnail')->store(
                 'assets/thumbnail/ormawa', 'public'
             );
-        }
-
-        // update to vision
-        foreach($data['visions'] as $key => $value){
-            $vision = Vision::find($key);
-            $vision->vision = $value;
-            $vision->save();
-        }
-
-
-        //add new vision
-        if(isset($data['vision'])){
-            foreach($data['vision'] as $key => $value){
-                $vision = New Vision();
-                $vision->ormawas_id = $ormawa['id'];
-                $vision->vision = $value;
-                $vision->save();
-            }
-        }
-
-
-        // update to mission
-        foreach($data['missions'] as $key => $value){
-            $mission = Missions::find($key);
-            $mission->mission = $value;
-            $mission->save();
-        }
-
-        //add new mission
-        if(isset($data['mission'])){
-            foreach($data['mission'] as $key => $value){
-                $mission = New Missions();
-                $mission->ormawas_id = $ormawa['id'];
-                $mission->mission = $value;
-                $mission->save();
-            }
         }
 
         $ormawa->update($data);

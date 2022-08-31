@@ -17,6 +17,8 @@ class Ormawa extends Model
     protected $fillable = [
         'name',
         'description',
+        'vision',
+        'mission',
         'thumbnail',
         'url_instagram',
         'slug'

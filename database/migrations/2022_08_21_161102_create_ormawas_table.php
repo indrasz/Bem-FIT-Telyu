@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->longText('description');
             $table->string('thumbnail');
+            $table->longText('vision');
+            $table->longText('mission');
             $table->string('url_instagram');
             $table->string('slug');
 

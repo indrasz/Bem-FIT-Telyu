@@ -129,13 +129,7 @@
                         dui. Massa
                         massa purus
                         feugiat condimentum at. Suscipit egestas integer pharetra --}}
-                        @forelse ($ormawas->vision as $key => $item)
-                            {{ $item->vision }}
-                        @empty
-                            <div class="col-12 justify-content-center text-center">
-                                Belum ada visi yang diupload
-                            </div>
-                        @endforelse
+                        {!! $ormawas->vision !!}
                     </div>
                 </div>
             </div>
@@ -179,13 +173,7 @@
                     </div>
 
                     <div class="title-text text-center text-sm-end grey-color mt-3">
-                        @forelse ($ormawas->mission as $key => $item)
-                            {{ $item->mission }}
-                        @empty
-                            <div class="col-12 justify-content-center text-center">
-                                Belum ada visi yang diupload
-                            </div>
-                        @endforelse
+                        {!! $ormawas->mission !!}
                     </div>
 
                 </div>

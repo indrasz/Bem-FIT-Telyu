@@ -12,7 +12,7 @@ class OrmawaController extends Controller
 {
     public function index(Request $request, $slug){
         $ormawa = Ormawa::all();
-        $ormawas = Ormawa::where('slug', $slug)->with(['vision', 'mission'])->firstOrFail();
+        $ormawas = Ormawa::where('slug', $slug)->firstOrFail();
         // $vision = Vision::where('ormawas_id', $slug['id'])->get();
         // $mission = Missions::where('ormawas_id', $slug['id'])->get();
 

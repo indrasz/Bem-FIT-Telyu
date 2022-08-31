@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\Advokasi;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\AdvokasiRequest;
 use App\Models\Ormawa;
@@ -29,7 +28,7 @@ class AdvokasiController extends Controller
         // $data['thumbnail'] = $request->file('thumbnail')->store('assets/thumbnail/news', 'public');
         Advokasi::create($data);
 
-        toast()->success('Send has been success');
+        toast()->success('Terimakasih atas laporan Anda, buka email secara berkala dalam kurun waktu maksimal 2x24 jam untuk informasi lebih lanjut.');
         return redirect()->route('advokasi');
     }
 }
